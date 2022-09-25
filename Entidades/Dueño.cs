@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Dueño : Usuario
     {
-        public Dueño(string nombre, string mail, string contraseña) : base(nombre, mail, contraseña)
+        public Dueño(string nombre, string apellido, string mail, string contraseña) : base(nombre,apellido, mail, contraseña)
         {
         }
     }

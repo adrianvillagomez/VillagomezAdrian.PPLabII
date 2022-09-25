@@ -16,3 +16,7 @@ F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\refint\Vista
 F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.pdb
 F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.genruntimeconfig.cache
 F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\ref\Vista.dll
+F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.FrmMenu.resources
+F:\Labo2022\VillagomezAdrian.PPLabII\Vista\bin\Debug\net5.0-windows\Entidades.dll
+F:\Labo2022\VillagomezAdrian.PPLabII\Vista\bin\Debug\net5.0-windows\Entidades.pdb
+F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.csproj.CopyComplete

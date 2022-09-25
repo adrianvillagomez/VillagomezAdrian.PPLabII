@@ -1,0 +1,12 @@
+F:\Labo2022\VillagomezAdrian.PPLabII\Entidades\obj\Debug\net5.0\Entidades.csproj.AssemblyReference.cache
+F:\Labo2022\VillagomezAdrian.PPLabII\Entidades\obj\Debug\net5.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+F:\Labo2022\VillagomezAdrian.PPLabII\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
+F:\Labo2022\VillagomezAdrian.PPLabII\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
+F:\Labo2022\VillagomezAdrian.PPLabII\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+F:\Labo2022\VillagomezAdrian.PPLabII\Entidades\bin\Debug\net5.0\Entidades.deps.json
+F:\Labo2022\VillagomezAdrian.PPLabII\Entidades\bin\Debug\net5.0\Entidades.dll
+F:\Labo2022\VillagomezAdrian.PPLabII\Entidades\bin\Debug\net5.0\Entidades.pdb
+F:\Labo2022\VillagomezAdrian.PPLabII\Entidades\obj\Debug\net5.0\Entidades.dll
+F:\Labo2022\VillagomezAdrian.PPLabII\Entidades\obj\Debug\net5.0\refint\Entidades.dll
+F:\Labo2022\VillagomezAdrian.PPLabII\Entidades\obj\Debug\net5.0\Entidades.pdb
+F:\Labo2022\VillagomezAdrian.PPLabII\Entidades\obj\Debug\net5.0\ref\Entidades.dll
