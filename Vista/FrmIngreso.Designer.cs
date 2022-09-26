@@ -42,6 +42,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblEmpresa = new System.Windows.Forms.Label();
             this.chkRecordar = new System.Windows.Forms.CheckBox();
+            this.lblMensaje = new System.Windows.Forms.Label();
             this.BarraDeTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -65,9 +66,9 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(38, 519);
+            this.btnIngresar.Location = new System.Drawing.Point(38, 550);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(332, 48);
+            this.btnIngresar.Size = new System.Drawing.Size(350, 48);
             this.btnIngresar.TabIndex = 1;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
@@ -115,7 +116,7 @@
             this.btnAutocompletar.ForeColor = System.Drawing.Color.White;
             this.btnAutocompletar.Location = new System.Drawing.Point(211, 268);
             this.btnAutocompletar.Name = "btnAutocompletar";
-            this.btnAutocompletar.Size = new System.Drawing.Size(168, 35);
+            this.btnAutocompletar.Size = new System.Drawing.Size(177, 35);
             this.btnAutocompletar.TabIndex = 5;
             this.btnAutocompletar.Text = "AutoCompletar";
             this.btnAutocompletar.UseVisualStyleBackColor = false;
@@ -206,12 +207,23 @@
             this.chkRecordar.Text = "Recordar";
             this.chkRecordar.UseVisualStyleBackColor = true;
             // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMensaje.ForeColor = System.Drawing.Color.Red;
+            this.lblMensaje.Location = new System.Drawing.Point(38, 506);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(0, 20);
+            this.lblMensaje.TabIndex = 13;
+            // 
             // FrmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(406, 635);
+            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.chkRecordar);
             this.Controls.Add(this.lblEmpresa);
             this.Controls.Add(this.pictureBox2);
@@ -258,5 +270,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblEmpresa;
         private System.Windows.Forms.CheckBox chkRecordar;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }

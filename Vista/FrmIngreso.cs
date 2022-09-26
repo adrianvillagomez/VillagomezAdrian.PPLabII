@@ -20,17 +20,26 @@ namespace Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Login.ValidarDatos(txtMail.Text) && Login.ValidarDatos(txtContraseña.Text))
+            if (Login.ValidarDatos(txtMail.Text, txtContraseña.Text))
             {
                 if (txtMail.Text == "admin@admin.com" && txtContraseña.Text == "1234")
                 {
                     FrmMenu menu = new FrmMenu();
                     menu.ShowDialog();
+                }else if(txtMail.Text == "alberto@gmail.com" && txtContraseña.Text == "Adf145633")
+                {
+                    FrmMenu menu = new FrmMenu();
+                    menu.ShowDialog();
                 }
+                else
+                {
+                    lblMensaje.Text = "*Usuario Incorrecto";
+                }
+                
             }
             else
             {
-                MessageBox.Show("error");
+                lblMensaje.Text = "*Se deben Completar todos los campos";
             }
         }
 
@@ -40,13 +49,16 @@ namespace Vista
             {
                 txtContraseña.Text = "1234";
                 txtMail.Text = "admin@admin.com";
-                
+                if (txtContraseña.Text !="1234" && txtMail.Text != "admin@admin.com")
+                lblMensaje.Visible = !lblMensaje.Visible;
+
             }
             else if (cmbRol.Text == "Vendedor")
             {
-
-                txtContraseña.Text = "1245";
+                txtContraseña.Text = "Adf145633";
                 txtMail.Text = "alberto@gmail.com";
+                if(txtContraseña.Text !="Adf145633" && txtMail.Text != "alberto@gmail.com")
+                lblMensaje.Visible = !lblMensaje.Visible;
                 
             }
         }
