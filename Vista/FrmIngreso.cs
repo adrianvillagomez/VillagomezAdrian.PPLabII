@@ -40,20 +40,14 @@ namespace Vista
             {
                 txtContraseña.Text = "1234";
                 txtMail.Text = "admin@admin.com";
+                
             }
             else if (cmbRol.Text == "Vendedor")
             {
-                Random rd = new Random();
 
-                foreach (Usuario item in Login.Usuarios)
-                {
-
-                    if (item is Vendedor)
-                    {
-                        txtContraseña.Text = ((Vendedor)item).Contraseña;
-                        txtMail.Text = ((Vendedor)item).Mail;
-                    }
-                }
+                txtContraseña.Text = "1245";
+                txtMail.Text = "alberto@gmail.com";
+                
             }
         }
 
@@ -61,6 +55,11 @@ namespace Vista
         {
             cmbRol.DataSource = Enum.GetValues(typeof(Roles));
             cmbRol.SelectedItem = null;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

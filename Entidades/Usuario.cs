@@ -11,8 +11,7 @@ namespace Entidades
         protected string contraseña;
 
         public string Nombre { get => nombre; set => nombre = value; }
-        public string Mail { get => mail; set => mail = value; }
-        public string Contraseña { get => contraseña; }
+        public string Mail { get => mail; set => mail = value; }       
         public string Apellido { get => apellido; set => apellido = value; }
 
         protected Usuario(string nombre, string apellido,string mail, string contraseña)

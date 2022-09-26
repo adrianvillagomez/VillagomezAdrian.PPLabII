@@ -21,8 +21,8 @@ namespace Entidades
         {
             Dueño dueño = new Dueño("Juan","Rockefeller", "admin@admin.com", "1234");
             Vendedor vendedor1 = new Vendedor("Alberto","Perez" ,"alberto@gmail.com", "1245");
-            Vendedor vendedor2 = new Vendedor("Federico","Fernandez", "alberto@gmail.com", "1245");
-            Vendedor vendedor3 = new Vendedor("Roberto","Acosta", "alberto@gmail.com", "1245");
+            Vendedor vendedor2 = new Vendedor("Federico","Fernandez", "alberto@gmail.com", "2455");
+            Vendedor vendedor3 = new Vendedor("Roberto","Acosta", "alberto@gmail.com", "1564");
             usuarios.Add(dueño);
             usuarios.Add(vendedor1);
             usuarios.Add(vendedor2);
