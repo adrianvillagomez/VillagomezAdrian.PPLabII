@@ -25,8 +25,11 @@ namespace Vista
                 if (txtMail.Text == "admin@admin.com" && txtContraseña.Text == "1234")
                 {
                     FrmMenu menu = new FrmMenu();
-                    menu.ShowDialog();
-                }else if(txtMail.Text == "alberto@gmail.com" && txtContraseña.Text == "Adf145633")
+                    this.Hide();
+                    menu.Show();
+                    
+                }
+                else if(txtMail.Text == "alberto@gmail.com" && txtContraseña.Text == "Adf145633")
                 {
                     FrmMenu menu = new FrmMenu();
                     menu.ShowDialog();

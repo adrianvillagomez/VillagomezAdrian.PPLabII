@@ -63,6 +63,36 @@ namespace Vista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1486504352_checklist_clipboard_inventory_list_report_tasks_todo_81326 {
+            get {
+                object obj = ResourceManager.GetObject("1486504352-checklist-clipboard-inventory-list-report-tasks-todo_81326", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1486504352_checklist_clipboard_inventory_list_report_tasks_todo_81326__1_ {
+            get {
+                object obj = ResourceManager.GetObject("1486504352-checklist-clipboard-inventory-list-report-tasks-todo_81326 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chart_sales_performance_coins_money_icon_157294 {
+            get {
+                object obj = ResourceManager.GetObject("chart_sales_performance_coins_money_icon_157294", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap electronic_13641 {
             get {
                 object obj = ResourceManager.GetObject("electronic_13641", resourceCulture);
@@ -86,6 +116,16 @@ namespace Vista.Properties {
         internal static System.Drawing.Bitmap emblemunreadable_93487 {
             get {
                 object obj = ResourceManager.GetObject("emblemunreadable_93487", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_house_3526 {
+            get {
+                object obj = ResourceManager.GetObject("home_house_3526", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
