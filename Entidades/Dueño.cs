@@ -11,5 +11,8 @@ namespace Entidades
         public Dueño(string nombre, string apellido, string mail, string contraseña) : base(nombre,apellido, mail, contraseña)
         {
         }
+
+
+
     }
 }

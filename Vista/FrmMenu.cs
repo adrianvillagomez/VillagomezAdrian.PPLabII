@@ -12,10 +12,26 @@ namespace Vista
 {
     public partial class FrmMenu : Form
     {
-        public FrmMenu()
+        FrmIngreso ingreso;
+        public FrmMenu(FrmIngreso ingreso)
         {
             InitializeComponent();
+            this.ingreso = ingreso;
         }
-      
+
+        private void FrmMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ingreso.Close();
+        }
+
+        private void btnInvenario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

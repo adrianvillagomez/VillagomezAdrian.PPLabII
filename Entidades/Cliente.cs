@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public enum Roles
+    public  class Cliente
     {
-        Administrador,
-        Vendedor
+       
+       
+
+      
+       
     }
-    public enum Categoria
-    {
-        Periferico,
-        Placa_Video
-    }
+
+
 
 }

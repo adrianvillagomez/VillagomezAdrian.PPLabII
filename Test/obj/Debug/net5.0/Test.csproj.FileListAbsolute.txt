@@ -14,3 +14,6 @@ F:\Labo2022\VillagomezAdrian.PPLabII\Test\obj\Debug\net5.0\refint\Test.dll
 F:\Labo2022\VillagomezAdrian.PPLabII\Test\obj\Debug\net5.0\Test.pdb
 F:\Labo2022\VillagomezAdrian.PPLabII\Test\obj\Debug\net5.0\Test.genruntimeconfig.cache
 F:\Labo2022\VillagomezAdrian.PPLabII\Test\obj\Debug\net5.0\ref\Test.dll
+F:\Labo2022\VillagomezAdrian.PPLabII\Test\bin\Debug\net5.0\Entidades.dll
+F:\Labo2022\VillagomezAdrian.PPLabII\Test\bin\Debug\net5.0\Entidades.pdb
+F:\Labo2022\VillagomezAdrian.PPLabII\Test\obj\Debug\net5.0\Test.csproj.CopyComplete

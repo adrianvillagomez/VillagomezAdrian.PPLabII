@@ -51,6 +51,7 @@
             this.btnInvenario.TabIndex = 0;
             this.btnInvenario.Text = "Administrar Inventario";
             this.btnInvenario.UseVisualStyleBackColor = false;
+            this.btnInvenario.Click += new System.EventHandler(this.btnInvenario_Click);
             // 
             // btnVentas
             // 
@@ -63,6 +64,7 @@
             this.btnVentas.TabIndex = 1;
             this.btnVentas.Text = "Administrar Ventas";
             this.btnVentas.UseVisualStyleBackColor = false;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // pictureBox2
             // 
@@ -109,7 +111,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(357, 508);
+            this.ClientSize = new System.Drawing.Size(353, 448);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblEmpresa);
@@ -123,6 +125,7 @@
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMenu_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

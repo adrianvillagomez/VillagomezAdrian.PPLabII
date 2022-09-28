@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,14 +25,16 @@ namespace Vista
             {
                 if (txtMail.Text == "admin@admin.com" && txtContraseña.Text == "1234")
                 {
-                    FrmMenu menu = new FrmMenu();
+                    //SoundPlayer sound = new SoundPlayer(@"c:\Windows\Media\IniciodenavegacióndeWindows.wav");
+                    //sound.Play();
+                    FrmMenu menu = new FrmMenu(this);
                     this.Hide();
                     menu.Show();
                     
                 }
                 else if(txtMail.Text == "alberto@gmail.com" && txtContraseña.Text == "Adf145633")
                 {
-                    FrmMenu menu = new FrmMenu();
+                    FrmMenu menu = new FrmMenu(this);
                     menu.ShowDialog();
                 }
                 else
