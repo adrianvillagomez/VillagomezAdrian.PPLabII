@@ -27,11 +27,12 @@ namespace Entidades
                     if (item == p1)
                     {
                         Console.WriteLine("El producto ya existe");
-                        item.Stock += p1.Stock;
+                        item.Stock = p1.Cantidad;
                         return n1;
                     }
                 }
                 n1.listaProductos.Add(p1);
+                p1.Stock = p1.Cantidad;
                 Console.WriteLine("Se agrego producto con exito");
                 return n1;
             }

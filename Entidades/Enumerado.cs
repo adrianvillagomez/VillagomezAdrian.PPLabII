@@ -11,10 +11,17 @@ namespace Entidades
         Administrador,
         Vendedor
     }
-    public enum Categoria
+    public enum Tag
     {
         Periferico,
-        Placa_Video
+        Placa_Video,
+        Notebooks,
+        Computadoras,
+        Componente_PC,
+        Consolas,
+        Smarphones,
+        Conectividad,
+        Almacenamiento
     }
 
 }
