@@ -1,65 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Entidades.Cliente" Collapsed="true">
-    <Position X="13.5" Y="0.5" Width="1.5" />
+    <Position X="13.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Cliente.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Dueño">
-    <Position X="8.5" Y="4.25" Width="1.5" />
+    <Position X="8.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Dueño.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Login" Collapsed="true">
-    <Position X="17" Y="0.5" Width="1.5" />
+    <Position X="17.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAgAIAAAAAAAAAAAAAAAAAACAAAAAgA=</HashCode>
       <FileName>Login.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Negocio" Collapsed="true">
-    <Position X="13.5" Y="1.5" Width="1.5" />
+    <Position X="13.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAA=</HashCode>
+      <HashCode>AAAAEAAAABAAAAAEQAAAAAAAAAAAAAAAAIAAAACAAAA=</HashCode>
       <FileName>Negocio.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Producto" Collapsed="true">
-    <Position X="15.5" Y="2.75" Width="1.5" />
+    <Position X="15.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAADEAAAAwAAAEAAAAAAAQgAAAEIAAAAgAAAAIAiA=</HashCode>
       <FileName>Producto.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Usuario">
-    <Position X="10" Y="0.5" Width="1.5" />
+    <Position X="10.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAACEAAACgAAAAAAAAAAAAAAAAQAAAAE=</HashCode>
       <FileName>Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Vendedor">
-    <Position X="11" Y="4.25" Width="1.5" />
+    <Position X="11.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Vendedor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="Entidades.Roles" Collapsed="true">
-    <Position X="11.75" Y="0.5" Width="1.5" />
+    <Position X="12" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAABAAA=</HashCode>
       <FileName>Enumerado.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Entidades.Categoria">
-    <Position X="15.25" Y="0.5" Width="1.5" />
+  <Enum Name="Entidades.Tag" Collapsed="true">
+    <Position X="12" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgEAAAAACAAAFAQAAQAAAAAAgAAAAAAAAAAIAAAAA=</HashCode>
       <FileName>Enumerado.cs</FileName>
     </TypeIdentifier>
   </Enum>

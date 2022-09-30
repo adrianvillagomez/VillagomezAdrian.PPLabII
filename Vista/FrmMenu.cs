@@ -21,12 +21,14 @@ namespace Vista
 
         private void FrmMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ingreso.Close();
+            //ingreso.Close();
         }
 
         private void btnInvenario_Click(object sender, EventArgs e)
         {
-
+            FrmInventario inventario = new FrmInventario();
+            inventario.ShowDialog();
+            this.Close();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)

@@ -93,6 +93,7 @@
             this.txtMail.ForeColor = System.Drawing.Color.White;
             this.txtMail.Location = new System.Drawing.Point(38, 349);
             this.txtMail.Name = "txtMail";
+            this.txtMail.PlaceholderText = "Ingrese Mail";
             this.txtMail.Size = new System.Drawing.Size(350, 26);
             this.txtMail.TabIndex = 3;
             // 
@@ -105,6 +106,7 @@
             this.txtContraseña.Location = new System.Drawing.Point(38, 423);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.PlaceholderText = "Ingrese Contraseña";
             this.txtContraseña.Size = new System.Drawing.Size(350, 26);
             this.txtContraseña.TabIndex = 4;
             // 

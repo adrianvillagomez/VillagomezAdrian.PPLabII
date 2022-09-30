@@ -123,9 +123,39 @@ namespace Vista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap find_search_locate_6201 {
+            get {
+                object obj = ResourceManager.GetObject("find_search_locate_6201", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_house_3526 {
             get {
                 object obj = ResourceManager.GetObject("home_house_3526", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logout_37127 {
+            get {
+                object obj = ResourceManager.GetObject("Logout_37127", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_90894 {
+            get {
+                object obj = ResourceManager.GetObject("logout_90894", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

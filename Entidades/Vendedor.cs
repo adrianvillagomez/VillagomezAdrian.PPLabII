@@ -11,5 +11,13 @@ namespace Entidades
         public Vendedor(string nombre, string apellido, string mail, string contraseña) : base(nombre,apellido, mail, contraseña)
         {
         }
+
+        public override void Vender(Producto p1,int cantidad)
+        {
+            if(p1.Stock>0 && cantidad >0)
+            {
+                p1.Stock = -cantidad;
+            }
+        }
     }
 }

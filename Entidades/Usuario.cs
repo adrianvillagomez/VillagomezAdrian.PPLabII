@@ -21,6 +21,7 @@ namespace Entidades
             this.contraseña = contraseña;
             this.apellido = apellido;
         }
+        public  abstract void Vender(Producto p1, int cantidad);
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

@@ -21,3 +21,4 @@ F:\Labo2022\VillagomezAdrian.PPLabII\Vista\bin\Debug\net5.0-windows\Entidades.dl
 F:\Labo2022\VillagomezAdrian.PPLabII\Vista\bin\Debug\net5.0-windows\Entidades.pdb
 F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.csproj.CopyComplete
 F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.Properties.Resources.resources
+F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.FrmInventario.resources

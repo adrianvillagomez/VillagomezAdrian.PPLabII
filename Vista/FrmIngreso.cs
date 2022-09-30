@@ -28,7 +28,7 @@ namespace Vista
                     //SoundPlayer sound = new SoundPlayer(@"c:\Windows\Media\IniciodenavegacióndeWindows.wav");
                     //sound.Play();
                     FrmMenu menu = new FrmMenu(this);
-                    this.Hide();
+                    //this.Hide();
                     menu.Show();
                     
                 }
