@@ -133,6 +133,9 @@
   <data name="Logout_37127" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logout_37127.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="find_search_locate_6201" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\find_search_locate_6201.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="electronic_13641 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\electronic_13641 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,7 +151,7 @@
   <data name="chart_sales_performance_coins_money_icon_157294" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chart_sales_performance_coins_money_icon_157294.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="find_search_locate_6201" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\find_search_locate_6201.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="refresh_14433" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh_14433.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

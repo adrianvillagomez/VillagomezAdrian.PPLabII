@@ -28,12 +28,12 @@ namespace Vista
         private void FrmInventario_Load(object sender, EventArgs e)
         {
 
-            dtvProductos.DataSource = null;
-            dtvProductos.DataSource = central.ListaProductos;
-            this.dtvProductos.Columns["Cantidad"].Visible = false;
+            LimpiarDataGrid();
 
             cmbCategoria.DataSource = Enum.GetValues(typeof(Tag));
-            cmbCategoria.SelectedItem = null;        
+            cmbCategoria.SelectedItem = null;   
+            
+            cmbBuscador.DataSource = Enum.GetValues(typeof(Tag));
 
         }
         private Negocio AgregarProductos()
@@ -104,9 +104,36 @@ namespace Vista
             Producto productoNuevo = new Producto(marca, tag, modelo, precio, cantidad);
             central += productoNuevo;
 
+            LimpiarDataGrid();
+        }
+        private void LimpiarDataGrid()
+        {
             dtvProductos.DataSource = null;
             dtvProductos.DataSource = central.ListaProductos;
-            //this.dtvProductos.Columns["Cantidad"].Visible = false;
+            this.dtvProductos.Columns["Cantidad"].Visible = false;
+        }
+
+        private void pictureBoxBuscar_Click(object sender, EventArgs e)
+        {
+            List<Producto> listaAux = new List<Producto>();
+            string buscar = cmbBuscador.SelectedItem.ToString();
+            foreach (Producto item in central.ListaProductos)
+            {
+
+                if (item.Tag.ToString().Contains(buscar))
+                {
+                    listaAux.Add(item);
+                }
+            }
+            dtvProductos.DataSource = null;
+            dtvProductos.DataSource = listaAux;
+            this.dtvProductos.Columns["Cantidad"].Visible = false;
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            LimpiarDataGrid();
         }
     }
 }

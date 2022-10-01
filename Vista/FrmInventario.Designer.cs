@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblInicio = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lvlCerrarSesion = new System.Windows.Forms.Label();
@@ -45,11 +45,14 @@
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.pictureBoxBuscar = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbBuscador = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +64,7 @@
             this.lblInicio.ForeColor = System.Drawing.Color.White;
             this.lblInicio.Location = new System.Drawing.Point(0, 0);
             this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(883, 87);
+            this.lblInicio.Size = new System.Drawing.Size(1089, 87);
             this.lblInicio.TabIndex = 0;
             this.lblInicio.Text = "Electronic Life Inventario";
             this.lblInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -69,7 +72,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Vista.Properties.Resources.Logout_37127;
-            this.pictureBox1.Location = new System.Drawing.Point(808, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1007, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -83,7 +86,7 @@
             this.lvlCerrarSesion.BackColor = System.Drawing.Color.Teal;
             this.lvlCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lvlCerrarSesion.ForeColor = System.Drawing.Color.RosyBrown;
-            this.lvlCerrarSesion.Location = new System.Drawing.Point(777, 63);
+            this.lvlCerrarSesion.Location = new System.Drawing.Point(983, 63);
             this.lvlCerrarSesion.Name = "lvlCerrarSesion";
             this.lvlCerrarSesion.Size = new System.Drawing.Size(106, 18);
             this.lvlCerrarSesion.TabIndex = 2;
@@ -97,12 +100,12 @@
             this.dtvProductos.AllowUserToResizeRows = false;
             this.dtvProductos.BackgroundColor = System.Drawing.Color.White;
             this.dtvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtvProductos.Location = new System.Drawing.Point(284, 152);
+            this.dtvProductos.Location = new System.Drawing.Point(255, 140);
             this.dtvProductos.Name = "dtvProductos";
             this.dtvProductos.ReadOnly = true;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.dtvProductos.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dtvProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtvProductos.RowTemplate.Height = 25;
             this.dtvProductos.Size = new System.Drawing.Size(587, 367);
             this.dtvProductos.TabIndex = 3;
@@ -120,7 +123,7 @@
             // lblDetalle
             // 
             this.lblDetalle.AutoSize = true;
-            this.lblDetalle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDetalle.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblDetalle.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.lblDetalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblDetalle.Location = new System.Drawing.Point(37, 118);
@@ -211,42 +214,72 @@
             this.txtCantidad.Size = new System.Drawing.Size(139, 23);
             this.txtCantidad.TabIndex = 15;
             // 
+            // pictureBoxBuscar
+            // 
+            this.pictureBoxBuscar.Image = global::Vista.Properties.Resources.find_search_locate_6201;
+            this.pictureBoxBuscar.Location = new System.Drawing.Point(1007, 152);
+            this.pictureBoxBuscar.Name = "pictureBoxBuscar";
+            this.pictureBoxBuscar.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxBuscar.TabIndex = 16;
+            this.pictureBoxBuscar.TabStop = false;
+            this.pictureBoxBuscar.Click += new System.EventHandler(this.pictureBoxBuscar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(255, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(145, 19);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Lista De Productos";
+            // 
+            // cmbBuscador
+            // 
+            this.cmbBuscador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBuscador.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbBuscador.FormattingEnabled = true;
+            this.cmbBuscador.Location = new System.Drawing.Point(848, 158);
+            this.cmbBuscador.Name = "cmbBuscador";
+            this.cmbBuscador.Size = new System.Drawing.Size(153, 25);
+            this.cmbBuscador.TabIndex = 20;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.Teal;
+            this.label6.Location = new System.Drawing.Point(848, 140);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 17);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Buscar Por Tags :";
+            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Vista.Properties.Resources.find_search_locate_6201;
-            this.pictureBox2.Location = new System.Drawing.Point(483, 118);
+            this.pictureBox2.Image = global::Vista.Properties.Resources.refresh_14433;
+            this.pictureBox2.Location = new System.Drawing.Point(1045, 152);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(38, 440);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Agregar Producto";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(284, 119);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Buscar";
-            this.textBox1.Size = new System.Drawing.Size(193, 23);
-            this.textBox1.TabIndex = 18;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // FrmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 533);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1089, 523);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cmbBuscador);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.pictureBoxBuscar);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cmbCategoria);
@@ -272,6 +305,7 @@
             this.Load += new System.EventHandler(this.FrmInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -296,8 +330,10 @@
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.PictureBox pictureBoxBuscar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbBuscador;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
