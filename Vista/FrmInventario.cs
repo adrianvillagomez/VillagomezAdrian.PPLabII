@@ -31,8 +31,8 @@ namespace Vista
             LimpiarDataGrid();
 
             cmbCategoria.DataSource = Enum.GetValues(typeof(Tag));
-            cmbCategoria.SelectedItem = null;   
-            
+            //cmbCategoria.SelectedItem = null;   
+
             cmbBuscador.DataSource = Enum.GetValues(typeof(Tag));
 
         }
@@ -45,8 +45,13 @@ namespace Vista
             Producto p4 = new Producto("Kingston", Entidades.Tag.Componente_PC, "1050", 42354, 100);
             Producto p5 = new Producto("Lenovo", Entidades.Tag.Computadoras, "B522", 42354, 5);
             Producto p6 = new Producto("Samsumg", Entidades.Tag.Smarphones, "A23", 42354, 100);
-
-            Producto p7 = new Producto("Lenovo", Entidades.Tag.Computadoras, "B522", 42354, 10);
+            Producto p7 = new Producto("Lenovo", Entidades.Tag.Computadoras, "C253", 10000, 10);
+            Producto p8 = new Producto("Samsumg", Entidades.Tag.Periferico, "Z25", 1000, 100);
+            Producto p9 = new Producto("WIffi", Entidades.Tag.Conectividad, "j21-58", 1500, 100);
+            Producto p10 = new Producto("Samsumg", Entidades.Tag.Almacenamiento, "SSD", 2500, 100);
+            Producto p11 = new Producto("Sonic", Entidades.Tag.Consolas, "PS4", 150000, 10);
+            Producto p12 = new Producto("Samsumg", Entidades.Tag.Periferico, "B35", 500, 100);
+            Producto p13 = new Producto("Aple", Entidades.Tag.Smarphones, "h35", 150000, 50);
             electronicLife += p1;
             electronicLife += p2;
             electronicLife += p3;
@@ -54,6 +59,13 @@ namespace Vista
             electronicLife += p5;
             electronicLife += p6;
             electronicLife += p7;
+            electronicLife += p8;
+            electronicLife += p9;
+            electronicLife += p10;
+            electronicLife += p11;
+            electronicLife += p12;
+            electronicLife += p13;
+
             return electronicLife;
         }
 
@@ -92,19 +104,34 @@ namespace Vista
 
         private void btnAgregarProductos_Click(object sender, EventArgs e)
         {
-            Tag tag;
-            decimal precio;
-            int cantidad;
-            string marca=txtMarca.Text; 
-            Enum.TryParse<Tag>(cmbCategoria.SelectedValue.ToString(),out tag);
-            string modelo = txtModelo.Text;
-            decimal.TryParse(txtFijarPrecio.Text,out precio);
-            int.TryParse(txtCantidad.Text,out cantidad);
+            if (txtCantidad.Text.Trim() == "" || txtMarca.Text.Trim() == "" || txtFijarPrecio.Text.Trim() == "" || txtModelo.Text.Trim() == "")
+            {
+                lblErrorInv.Text = "*Se deben completar todos los campos";
+            }
+            else
+            {
 
-            Producto productoNuevo = new Producto(marca, tag, modelo, precio, cantidad);
-            central += productoNuevo;
+                Tag tag;
+                decimal precio;
+                int cantidad;
+                string marca = txtMarca.Text;
+                Enum.TryParse<Tag>(cmbCategoria.SelectedValue.ToString(), out tag);
+                string modelo = txtModelo.Text;
+                bool resultado1 = decimal.TryParse(txtFijarPrecio.Text, out precio);
+                bool resultado2 = int.TryParse(txtCantidad.Text, out cantidad);
+                if (resultado1 && resultado2)
+                {
+                    Producto productoNuevo = new Producto(marca, tag, modelo, precio, cantidad);
+                    central += productoNuevo;
 
-            LimpiarDataGrid();
+                    lblErrorInv.Text = "Producto Agregado con Exito!";
+                    lblErrorInv.ForeColor = Color.Blue;
+                    LimpiarDataGrid();
+                } else
+                {                  
+                    lblErrorInv.Text = "*Precio y Cantidad Solo valores numericos";
+                }
+            }
         }
         private void LimpiarDataGrid()
         {

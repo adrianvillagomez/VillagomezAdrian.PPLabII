@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblInicio = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lvlCerrarSesion = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@
             this.cmbBuscador = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblErrorInv = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscar)).BeginInit();
@@ -64,7 +65,7 @@
             this.lblInicio.ForeColor = System.Drawing.Color.White;
             this.lblInicio.Location = new System.Drawing.Point(0, 0);
             this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(1089, 87);
+            this.lblInicio.Size = new System.Drawing.Size(1102, 87);
             this.lblInicio.TabIndex = 0;
             this.lblInicio.Text = "Electronic Life Inventario";
             this.lblInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -100,21 +101,21 @@
             this.dtvProductos.AllowUserToResizeRows = false;
             this.dtvProductos.BackgroundColor = System.Drawing.Color.White;
             this.dtvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtvProductos.Location = new System.Drawing.Point(255, 140);
+            this.dtvProductos.Location = new System.Drawing.Point(280, 140);
             this.dtvProductos.Name = "dtvProductos";
             this.dtvProductos.ReadOnly = true;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.dtvProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dtvProductos.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtvProductos.RowTemplate.Height = 25;
-            this.dtvProductos.Size = new System.Drawing.Size(587, 367);
+            this.dtvProductos.Size = new System.Drawing.Size(587, 371);
             this.dtvProductos.TabIndex = 3;
             // 
             // btnAgregarProductos
             // 
-            this.btnAgregarProductos.Location = new System.Drawing.Point(38, 389);
+            this.btnAgregarProductos.Location = new System.Drawing.Point(12, 415);
             this.btnAgregarProductos.Name = "btnAgregarProductos";
-            this.btnAgregarProductos.Size = new System.Drawing.Size(138, 23);
+            this.btnAgregarProductos.Size = new System.Drawing.Size(220, 43);
             this.btnAgregarProductos.TabIndex = 4;
             this.btnAgregarProductos.Text = "Agregar Producto";
             this.btnAgregarProductos.UseVisualStyleBackColor = true;
@@ -135,9 +136,10 @@
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
+            this.lblMarca.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMarca.Location = new System.Drawing.Point(37, 152);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(46, 15);
+            this.lblMarca.Size = new System.Drawing.Size(54, 16);
             this.lblMarca.TabIndex = 6;
             this.lblMarca.Text = "Marca :";
             // 
@@ -145,7 +147,7 @@
             // 
             this.txtMarca.Location = new System.Drawing.Point(37, 170);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(139, 23);
+            this.txtMarca.Size = new System.Drawing.Size(175, 23);
             this.txtMarca.TabIndex = 7;
             // 
             // label1
@@ -161,7 +163,7 @@
             // 
             this.txtFijarPrecio.Location = new System.Drawing.Point(37, 302);
             this.txtFijarPrecio.Name = "txtFijarPrecio";
-            this.txtFijarPrecio.Size = new System.Drawing.Size(139, 23);
+            this.txtFijarPrecio.Size = new System.Drawing.Size(175, 23);
             this.txtFijarPrecio.TabIndex = 9;
             // 
             // label2
@@ -177,7 +179,7 @@
             // 
             this.txtModelo.Location = new System.Drawing.Point(37, 258);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(139, 23);
+            this.txtModelo.Size = new System.Drawing.Size(175, 23);
             this.txtModelo.TabIndex = 11;
             // 
             // label3
@@ -195,7 +197,7 @@
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(37, 214);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(139, 23);
+            this.cmbCategoria.Size = new System.Drawing.Size(175, 23);
             this.cmbCategoria.TabIndex = 13;
             // 
             // label4
@@ -211,13 +213,13 @@
             // 
             this.txtCantidad.Location = new System.Drawing.Point(37, 346);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(139, 23);
+            this.txtCantidad.Size = new System.Drawing.Size(175, 23);
             this.txtCantidad.TabIndex = 15;
             // 
             // pictureBoxBuscar
             // 
             this.pictureBoxBuscar.Image = global::Vista.Properties.Resources.find_search_locate_6201;
-            this.pictureBoxBuscar.Location = new System.Drawing.Point(1007, 152);
+            this.pictureBoxBuscar.Location = new System.Drawing.Point(1032, 152);
             this.pictureBoxBuscar.Name = "pictureBoxBuscar";
             this.pictureBoxBuscar.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -231,7 +233,7 @@
             this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(255, 118);
+            this.label5.Location = new System.Drawing.Point(280, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 19);
             this.label5.TabIndex = 19;
@@ -242,7 +244,7 @@
             this.cmbBuscador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBuscador.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbBuscador.FormattingEnabled = true;
-            this.cmbBuscador.Location = new System.Drawing.Point(848, 158);
+            this.cmbBuscador.Location = new System.Drawing.Point(873, 159);
             this.cmbBuscador.Name = "cmbBuscador";
             this.cmbBuscador.Size = new System.Drawing.Size(153, 25);
             this.cmbBuscador.TabIndex = 20;
@@ -252,7 +254,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(848, 140);
+            this.label6.Location = new System.Drawing.Point(873, 140);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 17);
             this.label6.TabIndex = 21;
@@ -261,7 +263,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Vista.Properties.Resources.refresh_14433;
-            this.pictureBox2.Location = new System.Drawing.Point(1045, 152);
+            this.pictureBox2.Location = new System.Drawing.Point(1070, 152);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -269,12 +271,24 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // lblErrorInv
+            // 
+            this.lblErrorInv.AutoSize = true;
+            this.lblErrorInv.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblErrorInv.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorInv.Location = new System.Drawing.Point(12, 386);
+            this.lblErrorInv.Name = "lblErrorInv";
+            this.lblErrorInv.Size = new System.Drawing.Size(31, 16);
+            this.lblErrorInv.TabIndex = 23;
+            this.lblErrorInv.Text = "aca";
+            // 
             // FrmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1089, 523);
+            this.ClientSize = new System.Drawing.Size(1102, 523);
+            this.Controls.Add(this.lblErrorInv);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbBuscador);
@@ -335,5 +349,6 @@
         private System.Windows.Forms.ComboBox cmbBuscador;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblErrorInv;
     }
 }
