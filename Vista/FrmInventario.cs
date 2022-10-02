@@ -31,7 +31,7 @@ namespace Vista
             LimpiarDataGrid();
 
             cmbCategoria.DataSource = Enum.GetValues(typeof(Tag));
-            //cmbCategoria.SelectedItem = null;   
+            
 
             cmbBuscador.DataSource = Enum.GetValues(typeof(Tag));
 
@@ -69,44 +69,12 @@ namespace Vista
             return electronicLife;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Int32 selectedCellCount =
-             dtvProductos.GetCellCount(DataGridViewElementStates.Selected);
-            if (selectedCellCount > 0)
-            {
-                if (dtvProductos.AreAllCellsSelected(true))
-                {
-                    MessageBox.Show("All cells are selected", "Selected Cells");
-                }
-                else
-                {
-                    System.Text.StringBuilder sb =
-                        new System.Text.StringBuilder();
-
-                    for (int i = 0;
-                                     i < selectedCellCount; i++)
-                    {
-                        sb.Append("Row: ");
-                        sb.Append(dtvProductos.SelectedCells[i].RowIndex
-                            .ToString());
-                        sb.Append(", Column: ");
-                        sb.Append(dtvProductos.SelectedCells[i].ColumnIndex
-                            .ToString());
-                        sb.Append(Environment.NewLine);
-                    }
-
-                    sb.Append("Total: " + selectedCellCount.ToString());
-                    MessageBox.Show(sb.ToString(), "Selected Cells");
-                }
-            }
-        }
-
         private void btnAgregarProductos_Click(object sender, EventArgs e)
         {
             if (txtCantidad.Text.Trim() == "" || txtMarca.Text.Trim() == "" || txtFijarPrecio.Text.Trim() == "" || txtModelo.Text.Trim() == "")
             {
                 lblErrorInv.Text = "*Se deben completar todos los campos";
+                lblErrorInv.ForeColor = Color.Red;
             }
             else
             {
@@ -126,12 +94,18 @@ namespace Vista
 
                     lblErrorInv.Text = "Producto Agregado con Exito!";
                     lblErrorInv.ForeColor = Color.Blue;
+                    txtMarca.Text = "";
+                    txtModelo.Text = "";
+                    txtFijarPrecio.Text = "";
+                    txtCantidad.Text = "";
                     LimpiarDataGrid();
                 } else
                 {                  
                     lblErrorInv.Text = "*Precio y Cantidad Solo valores numericos";
+                    lblErrorInv.ForeColor = Color.Red;
                 }
             }
+           
         }
         private void LimpiarDataGrid()
         {
@@ -161,6 +135,17 @@ namespace Vista
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             LimpiarDataGrid();
+        }
+
+        private void dtvProductos_DoubleClick(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmVentas f = new FrmVentas(central);
+            f.ShowDialog();
         }
     }
 }

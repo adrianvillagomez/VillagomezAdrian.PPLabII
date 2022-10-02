@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblInicio = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lvlCerrarSesion = new System.Windows.Forms.Label();
@@ -51,10 +51,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblErrorInv = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnVentas = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInicio
@@ -104,27 +109,31 @@
             this.dtvProductos.Location = new System.Drawing.Point(280, 140);
             this.dtvProductos.Name = "dtvProductos";
             this.dtvProductos.ReadOnly = true;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.dtvProductos.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dtvProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtvProductos.RowTemplate.Height = 25;
             this.dtvProductos.Size = new System.Drawing.Size(587, 371);
             this.dtvProductos.TabIndex = 3;
+            this.dtvProductos.DoubleClick += new System.EventHandler(this.dtvProductos_DoubleClick);
             // 
             // btnAgregarProductos
             // 
-            this.btnAgregarProductos.Location = new System.Drawing.Point(12, 415);
+            this.btnAgregarProductos.BackColor = System.Drawing.Color.Silver;
+            this.btnAgregarProductos.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAgregarProductos.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregarProductos.Location = new System.Drawing.Point(58, 409);
             this.btnAgregarProductos.Name = "btnAgregarProductos";
-            this.btnAgregarProductos.Size = new System.Drawing.Size(220, 43);
+            this.btnAgregarProductos.Size = new System.Drawing.Size(174, 49);
             this.btnAgregarProductos.TabIndex = 4;
             this.btnAgregarProductos.Text = "Agregar Producto";
-            this.btnAgregarProductos.UseVisualStyleBackColor = true;
+            this.btnAgregarProductos.UseVisualStyleBackColor = false;
             this.btnAgregarProductos.Click += new System.EventHandler(this.btnAgregarProductos_Click);
             // 
             // lblDetalle
             // 
             this.lblDetalle.AutoSize = true;
-            this.lblDetalle.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblDetalle.BackColor = System.Drawing.Color.White;
             this.lblDetalle.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.lblDetalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblDetalle.Location = new System.Drawing.Point(37, 118);
@@ -136,10 +145,10 @@
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMarca.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMarca.Location = new System.Drawing.Point(37, 152);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(54, 16);
+            this.lblMarca.Size = new System.Drawing.Size(46, 15);
             this.lblMarca.TabIndex = 6;
             this.lblMarca.Text = "Marca :";
             // 
@@ -153,9 +162,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(37, 196);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 15);
+            this.label1.Size = new System.Drawing.Size(88, 15);
             this.label1.TabIndex = 8;
             this.label1.Text = "Fijar Categoria :";
             // 
@@ -169,6 +179,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(37, 240);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 15);
@@ -185,6 +196,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(37, 284);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 15);
@@ -203,9 +215,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(37, 328);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 15);
+            this.label4.Size = new System.Drawing.Size(60, 15);
             this.label4.TabIndex = 14;
             this.label4.Text = "Cantidad :";
             // 
@@ -230,7 +243,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label5.Location = new System.Drawing.Point(280, 118);
@@ -278,16 +291,48 @@
             this.lblErrorInv.ForeColor = System.Drawing.Color.Red;
             this.lblErrorInv.Location = new System.Drawing.Point(12, 386);
             this.lblErrorInv.Name = "lblErrorInv";
-            this.lblErrorInv.Size = new System.Drawing.Size(31, 16);
+            this.lblErrorInv.Size = new System.Drawing.Size(0, 16);
             this.lblErrorInv.TabIndex = 23;
-            this.lblErrorInv.Text = "aca";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Vista.Properties.Resources.sales_sale_supermarket_stock_market_icon_153077;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 463);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnVentas
+            // 
+            this.btnVentas.Location = new System.Drawing.Point(58, 463);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(174, 48);
+            this.btnVentas.TabIndex = 26;
+            this.btnVentas.Text = "Administrar Ventas";
+            this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Vista.Properties.Resources.add_box_item_product_icon_179239;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 409);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(48, 47);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 27;
+            this.pictureBox4.TabStop = false;
             // 
             // FrmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1102, 523);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.btnVentas);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.lblErrorInv);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label6);
@@ -321,6 +366,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,5 +397,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblErrorInv;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnVentas;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

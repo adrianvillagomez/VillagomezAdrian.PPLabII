@@ -83,6 +83,26 @@ namespace Vista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _62876moneybag_109253 {
+            get {
+                object obj = ResourceManager.GetObject("62876moneybag_109253", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_box_item_product_icon_179239 {
+            get {
+                object obj = ResourceManager.GetObject("add_box_item_product_icon_179239", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chart_sales_performance_coins_money_icon_157294 {
             get {
                 object obj = ResourceManager.GetObject("chart_sales_performance_coins_money_icon_157294", resourceCulture);
@@ -176,6 +196,16 @@ namespace Vista.Properties {
         internal static System.Drawing.Bitmap refresh_14433 {
             get {
                 object obj = ResourceManager.GetObject("refresh_14433", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sales_sale_supermarket_stock_market_icon_153077 {
+            get {
+                object obj = ResourceManager.GetObject("sales_sale_supermarket_stock_market_icon_153077", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
