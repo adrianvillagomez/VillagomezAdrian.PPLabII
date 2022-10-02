@@ -83,6 +83,16 @@ namespace Vista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4105931_add_to_cart_buy_cart_sell_shop_shopping_cart_113919 {
+            get {
+                object obj = ResourceManager.GetObject("4105931-add-to-cart-buy-cart-sell-shop-shopping-cart_113919", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _62876moneybag_109253 {
             get {
                 object obj = ResourceManager.GetObject("62876moneybag_109253", resourceCulture);

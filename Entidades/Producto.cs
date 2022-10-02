@@ -27,7 +27,20 @@ namespace Entidades
         public Tag Tag { get => tag; set => tag = value; }
         public string Modelo { get => modelo; set => modelo = value; }
         public decimal Precio { get => precio; set => precio = value; }
-        public int Stock { get => stock; set => stock += value; }
+        public int Stock
+        {
+            get
+            {
+                return stock;
+            }
+            set
+            {
+                if (stock >= 0)
+                {
+                    stock += value;
+                }
+            }
+        }
         public int Cantidad { get => cantidad; set => cantidad = value; }
         /// <summary>
         /// Dos usuarios sera iguales si tienen la misma marca,Tag y modelo

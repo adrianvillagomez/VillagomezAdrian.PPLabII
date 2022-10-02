@@ -139,8 +139,8 @@
   <data name="home_house_3526" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_house_3526.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add_box_item_product_icon_179239" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_box_item_product_icon_179239.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="electronic_13641" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electronic_13641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chart_sales_performance_coins_money_icon_157294" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chart_sales_performance_coins_money_icon_157294.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,8 +148,11 @@
   <data name="emblemunreadable_93487" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emblemunreadable_93487.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1486504352-checklist-clipboard-inventory-list-report-tasks-todo_81326 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1486504352-checklist-clipboard-inventory-list-report-tasks-todo_81326 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add_box_item_product_icon_179239" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_box_item_product_icon_179239.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="62876moneybag_109253" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\62876moneybag_109253.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="onlineshop_78377" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\onlineshop_78377.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,10 +160,10 @@
   <data name="1486504352-checklist-clipboard-inventory-list-report-tasks-todo_81326" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1486504352-checklist-clipboard-inventory-list-report-tasks-todo_81326.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="electronic_13641" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\electronic_13641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1486504352-checklist-clipboard-inventory-list-report-tasks-todo_81326 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1486504352-checklist-clipboard-inventory-list-report-tasks-todo_81326 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="62876moneybag_109253" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\62876moneybag_109253.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="4105931-add-to-cart-buy-cart-sell-shop-shopping-cart_113919" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4105931-add-to-cart-buy-cart-sell-shop-shopping-cart_113919.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
