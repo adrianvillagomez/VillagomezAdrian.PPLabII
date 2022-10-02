@@ -23,5 +23,9 @@ namespace Entidades
         Conectividad,
         Almacenamiento
     }
-
+    public enum MetodoDePago
+    {
+        Efectivo,
+        Credito
+    }
 }

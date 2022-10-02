@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblInicio = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -35,8 +36,6 @@
             this.cmbBuscador = new System.Windows.Forms.ComboBox();
             this.lstProductos = new System.Windows.Forms.ListBox();
             this.picBuscar = new System.Windows.Forms.PictureBox();
-            this.txtStock = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,17 +44,24 @@
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.lblMarca = new System.Windows.Forms.Label();
             this.txtCategoria = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dtvCarrito = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
+            this.dtvListaPrincipal = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPrecioTotal = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbMetodoDePago = new System.Windows.Forms.ComboBox();
+            this.btnVenta = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPrecioFinal = new System.Windows.Forms.TextBox();
+            this.lblErrorInv = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvCarrito)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvListaPrincipal)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInicio
@@ -122,24 +128,6 @@
             this.picBuscar.TabIndex = 23;
             this.picBuscar.TabStop = false;
             this.picBuscar.Click += new System.EventHandler(this.pictureBoxBuscar_Click);
-            // 
-            // txtStock
-            // 
-            this.txtStock.Location = new System.Drawing.Point(814, 210);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.ReadOnly = true;
-            this.txtStock.Size = new System.Drawing.Size(175, 23);
-            this.txtStock.TabIndex = 33;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(814, 192);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 15);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "Stock :";
             // 
             // label3
             // 
@@ -214,29 +202,12 @@
             this.txtCategoria.Size = new System.Drawing.Size(175, 23);
             this.txtCategoria.TabIndex = 34;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(610, 192);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 15);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Cantidad :";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(610, 211);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(60, 23);
-            this.numericUpDown1.TabIndex = 36;
-            // 
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(653, 257);
+            this.btnAgregar.Location = new System.Drawing.Point(689, 236);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(218, 30);
             this.btnAgregar.TabIndex = 37;
@@ -248,7 +219,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = global::Vista.Properties.Resources._4105931_add_to_cart_buy_cart_sell_shop_shopping_cart_113919;
-            this.pictureBox2.Location = new System.Drawing.Point(624, 257);
+            this.pictureBox2.Location = new System.Drawing.Point(651, 236);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -266,9 +237,9 @@
             this.dtvCarrito.Location = new System.Drawing.Point(24, 340);
             this.dtvCarrito.Name = "dtvCarrito";
             this.dtvCarrito.ReadOnly = true;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.dtvCarrito.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dtvCarrito.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtvCarrito.RowTemplate.Height = 25;
             this.dtvCarrito.Size = new System.Drawing.Size(553, 157);
             this.dtvCarrito.TabIndex = 39;
@@ -285,21 +256,118 @@
             this.label6.TabIndex = 40;
             this.label6.Text = "Carrito De Compras";
             // 
+            // dtvListaPrincipal
+            // 
+            this.dtvListaPrincipal.AllowUserToAddRows = false;
+            this.dtvListaPrincipal.AllowUserToDeleteRows = false;
+            this.dtvListaPrincipal.AllowUserToResizeColumns = false;
+            this.dtvListaPrincipal.AllowUserToResizeRows = false;
+            this.dtvListaPrincipal.BackgroundColor = System.Drawing.Color.White;
+            this.dtvListaPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvListaPrincipal.Location = new System.Drawing.Point(24, 530);
+            this.dtvListaPrincipal.Name = "dtvListaPrincipal";
+            this.dtvListaPrincipal.ReadOnly = true;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dtvListaPrincipal.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtvListaPrincipal.RowTemplate.Height = 25;
+            this.dtvListaPrincipal.Size = new System.Drawing.Size(553, 157);
+            this.dtvListaPrincipal.TabIndex = 41;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(633, 390);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 15);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Metodo de Pago :";
+            // 
+            // txtPrecioTotal
+            // 
+            this.txtPrecioTotal.Location = new System.Drawing.Point(717, 339);
+            this.txtPrecioTotal.Name = "txtPrecioTotal";
+            this.txtPrecioTotal.ReadOnly = true;
+            this.txtPrecioTotal.Size = new System.Drawing.Size(76, 23);
+            this.txtPrecioTotal.TabIndex = 43;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(633, 342);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 15);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Precio Total  :";
+            // 
+            // cmbMetodoDePago
+            // 
+            this.cmbMetodoDePago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMetodoDePago.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbMetodoDePago.FormattingEnabled = true;
+            this.cmbMetodoDePago.Location = new System.Drawing.Point(740, 380);
+            this.cmbMetodoDePago.Name = "cmbMetodoDePago";
+            this.cmbMetodoDePago.Size = new System.Drawing.Size(145, 25);
+            this.cmbMetodoDePago.TabIndex = 45;
+            this.cmbMetodoDePago.SelectedIndexChanged += new System.EventHandler(this.cmbMetodoDePago_SelectedIndexChanged);
+            // 
+            // btnVenta
+            // 
+            this.btnVenta.Location = new System.Drawing.Point(689, 491);
+            this.btnVenta.Name = "btnVenta";
+            this.btnVenta.Size = new System.Drawing.Size(272, 23);
+            this.btnVenta.TabIndex = 46;
+            this.btnVenta.Text = "Terminar Venta";
+            this.btnVenta.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(633, 434);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 15);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "Precio Final :";
+            // 
+            // txtPrecioFinal
+            // 
+            this.txtPrecioFinal.Location = new System.Drawing.Point(717, 426);
+            this.txtPrecioFinal.Name = "txtPrecioFinal";
+            this.txtPrecioFinal.ReadOnly = true;
+            this.txtPrecioFinal.Size = new System.Drawing.Size(76, 23);
+            this.txtPrecioFinal.TabIndex = 48;
+            // 
+            // lblErrorInv
+            // 
+            this.lblErrorInv.AutoSize = true;
+            this.lblErrorInv.Location = new System.Drawing.Point(682, 206);
+            this.lblErrorInv.Name = "lblErrorInv";
+            this.lblErrorInv.Size = new System.Drawing.Size(0, 15);
+            this.lblErrorInv.TabIndex = 49;
+            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1101, 533);
+            this.ClientSize = new System.Drawing.Size(1101, 699);
+            this.Controls.Add(this.lblErrorInv);
+            this.Controls.Add(this.txtPrecioFinal);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.btnVenta);
+            this.Controls.Add(this.cmbMetodoDePago);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtPrecioTotal);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dtvListaPrincipal);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dtvCarrito);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCategoria);
-            this.Controls.Add(this.txtStock);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.label2);
@@ -320,9 +388,9 @@
             this.Load += new System.EventHandler(this.FrmVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvCarrito)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvListaPrincipal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,8 +404,6 @@
         private System.Windows.Forms.ComboBox cmbBuscador;
         private System.Windows.Forms.ListBox lstProductos;
         private System.Windows.Forms.PictureBox picBuscar;
-        private System.Windows.Forms.TextBox txtStock;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.Label label2;
@@ -346,11 +412,18 @@
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.TextBox txtCategoria;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView dtvCarrito;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dtvListaPrincipal;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtPrecioTotal;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbMetodoDePago;
+        private System.Windows.Forms.Button btnVenta;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtPrecioFinal;
+        private System.Windows.Forms.Label lblErrorInv;
     }
 }

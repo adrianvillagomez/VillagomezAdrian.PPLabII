@@ -17,18 +17,24 @@ namespace Vista
         Negocio central;
         List<Producto> listaAux;
         List<Producto> listaAuxPedido;
+        decimal acumulador;
         public FrmVentas(Negocio negocio)
         {
             InitializeComponent();
             this.central = negocio;
             listaAuxPedido = new List<Producto>();
         }
-
         private void FrmVentas_Load(object sender, EventArgs e)
         {
             cmbBuscador.DataSource = Enum.GetValues(typeof(Tag));
-
+            dtvListaPrincipal.DataSource = null;
+            dtvListaPrincipal.DataSource = central.ListaProductos;
             LimpiarListBoxAux();
+
+
+            cmbMetodoDePago.DataSource = Enum.GetValues(typeof(MetodoDePago));
+            cmbMetodoDePago.SelectedItem = 0;
+
         }
 
         private void pictureBoxBuscar_Click(object sender, EventArgs e)
@@ -53,7 +59,6 @@ namespace Vista
                 txtMarca.Text = p.Marca;
                 txtModelo.Text = p.Modelo;
                 txtPrecio.Text = p.Precio.ToString();
-                txtStock.Text = p.Stock.ToString();
                 txtCategoria.Text = p.Tag.ToString();
             }
         }
@@ -62,15 +67,44 @@ namespace Vista
         {
             if (lstProductos.SelectedIndex != -1)
             {
-                Producto p = listaAux[lstProductos.SelectedIndex];
-                if (p.Stock > 0)
+                if (txtMarca.Text.Trim() == "" || txtMarca.Text.Trim() == "" || txtCategoria.Text.Trim() == "" || txtModelo.Text.Trim() == "")
+                {                  
+                    lblErrorInv.Text = "*Seleccionar productos de la Lista";
+                    lblErrorInv.ForeColor = Color.Red;                 
+                }
+                else
                 {
-                    p.Stock = -1;
-                    lstProductos.DataSource = null;
-                    lstProductos.DataSource = listaAux;
-                    AgregarProductosCarrito();
+
+                    Producto p = listaAux[lstProductos.SelectedIndex];
+                    if (p.Stock > 0)
+                    {
+                        p.Stock = -1;
+                        lstProductos.DataSource = null;
+                        lstProductos.DataSource = listaAux;
+                        acumulador += p.Precio;
+                        txtPrecioTotal.Text = acumulador.ToString();
+                        lblErrorInv.Text ="";
+                        AgregarProductosCarrito();
+                        if(cmbMetodoDePago.SelectedIndex == 0)
+                        {
+                            decimal.TryParse(txtPrecioTotal.Text, out decimal total);
+                            txtPrecioFinal.Text = total.ToString();
+                        }
+                        if (cmbMetodoDePago.SelectedIndex == 1)
+                        {
+                            decimal.TryParse(txtPrecioTotal.Text, out decimal total);
+                            txtPrecioFinal.Text = (total+(total*10/100)).ToString();
+                        }
+                    }
                 }
             }
+            else
+            {
+                lblErrorInv.Text = "*Seleccionar productos de la Lista";
+                lblErrorInv.ForeColor = Color.Red;
+            }
+            dtvListaPrincipal.DataSource = null;
+            dtvListaPrincipal.DataSource = central.ListaProductos;
         }
         private void AgregarProductosCarrito()
         {
@@ -89,8 +123,18 @@ namespace Vista
             lstProductos.DataSource = null;
             lstProductos.DataSource = listaAux;
         }
-        /*
-         Facturacion y problema de la list auxiliar no cambia stock;
-         */
+        private void cmbMetodoDePago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbMetodoDePago.SelectedIndex == 0)
+            {             
+                decimal.TryParse(txtPrecioTotal.Text, out decimal total);
+                txtPrecioFinal.Text = total.ToString();
+            }
+            if (cmbMetodoDePago.SelectedIndex == 1)
+            {
+                decimal.TryParse(txtPrecioTotal.Text, out decimal total);
+                txtPrecioFinal.Text = (total + (total * 10 / 100)).ToString();
+            }
+        }
     }
 }
