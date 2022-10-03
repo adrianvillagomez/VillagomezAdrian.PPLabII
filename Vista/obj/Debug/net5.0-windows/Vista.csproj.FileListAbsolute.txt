@@ -23,3 +23,4 @@ F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.csproj
 F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.Properties.Resources.resources
 F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.FrmInventario.resources
 F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.FrmVentas.resources
+F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.FrmFactura.resources

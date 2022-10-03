@@ -27,8 +27,7 @@ namespace Vista
         private void FrmVentas_Load(object sender, EventArgs e)
         {
             cmbBuscador.DataSource = Enum.GetValues(typeof(Tag));
-            dtvListaPrincipal.DataSource = null;
-            dtvListaPrincipal.DataSource = central.ListaProductos;
+           
             LimpiarListBoxAux();
 
 
@@ -103,8 +102,7 @@ namespace Vista
                 lblErrorInv.Text = "*Seleccionar productos de la Lista";
                 lblErrorInv.ForeColor = Color.Red;
             }
-            dtvListaPrincipal.DataSource = null;
-            dtvListaPrincipal.DataSource = central.ListaProductos;
+           
         }
         private void AgregarProductosCarrito()
         {
@@ -136,5 +134,23 @@ namespace Vista
                 txtPrecioFinal.Text = (total + (total * 10 / 100)).ToString();
             }
         }
+
+        private void btnVenta_Click(object sender, EventArgs e)
+        {
+            Random rd = new Random();
+            Cliente c1 = new Cliente(txtNombreCliente.Text,txtApellidoCliente.Text,txtDniCliente.Text);
+            Factura f1 = new Factura();
+            f1.Cliente= c1;
+            f1.ListaAuxPedido=this.listaAuxPedido;
+            f1.Codigo = rd.Next(1500, 2000);
+
+            //Agregar a una lsita de facturas para el historial ;
+            FrmFactura factura = new FrmFactura(f1);
+            factura.ShowDialog();
+        }
+        //Agregar a una lsita de facturas para el historial ;
+        //Boton de historial
+        //Validar q se completen los nombres en ventas
+        //validar q se eligan productos
     }
 }

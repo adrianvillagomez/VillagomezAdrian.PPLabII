@@ -113,6 +113,16 @@ namespace Vista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap artboard_123056 {
+            get {
+                object obj = ResourceManager.GetObject("artboard_123056", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chart_sales_performance_coins_money_icon_157294 {
             get {
                 object obj = ResourceManager.GetObject("chart_sales_performance_coins_money_icon_157294", resourceCulture);
@@ -173,6 +183,26 @@ namespace Vista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_0013_sale_102755 {
+            get {
+                object obj = ResourceManager.GetObject("icon-0013-sale_102755", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap invoice_document_bill_delivery_note_icon_225179 {
+            get {
+                object obj = ResourceManager.GetObject("invoice_document_bill_delivery_note_icon_225179", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logout_37127 {
             get {
                 object obj = ResourceManager.GetObject("Logout_37127", resourceCulture);
@@ -186,6 +216,16 @@ namespace Vista.Properties {
         internal static System.Drawing.Bitmap logout_90894 {
             get {
                 object obj = ResourceManager.GetObject("logout_90894", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap offer_discount_sales_economy_icon_227983 {
+            get {
+                object obj = ResourceManager.GetObject("offer_discount_sales_economy_icon_227983", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
