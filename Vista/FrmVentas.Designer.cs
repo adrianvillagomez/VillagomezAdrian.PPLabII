@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblInicio = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBuscar = new System.Windows.Forms.Label();
@@ -65,12 +65,18 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtDniCliente = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.lblErrorClientes = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lblHistorial = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvCarrito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInicio
@@ -246,11 +252,11 @@
             this.dtvCarrito.Location = new System.Drawing.Point(15, 429);
             this.dtvCarrito.Name = "dtvCarrito";
             this.dtvCarrito.ReadOnly = true;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.dtvCarrito.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dtvCarrito.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtvCarrito.RowTemplate.Height = 25;
-            this.dtvCarrito.Size = new System.Drawing.Size(553, 169);
+            this.dtvCarrito.Size = new System.Drawing.Size(553, 185);
             this.dtvCarrito.TabIndex = 39;
             // 
             // label6
@@ -309,7 +315,7 @@
             this.btnVenta.BackColor = System.Drawing.Color.IndianRed;
             this.btnVenta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnVenta.ForeColor = System.Drawing.Color.White;
-            this.btnVenta.Location = new System.Drawing.Point(711, 562);
+            this.btnVenta.Location = new System.Drawing.Point(682, 582);
             this.btnVenta.Name = "btnVenta";
             this.btnVenta.Size = new System.Drawing.Size(256, 32);
             this.btnVenta.TabIndex = 46;
@@ -345,6 +351,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.pictureBox3.Image = global::Vista.Properties.Resources.Logout_37127;
             this.pictureBox3.Location = new System.Drawing.Point(929, 12);
             this.pictureBox3.Name = "pictureBox3";
@@ -352,6 +359,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 50;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // lvlCerrarSesion
             // 
@@ -369,7 +377,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.Image = global::Vista.Properties.Resources.invoice_document_bill_delivery_note_icon_225179;
-            this.pictureBox4.Location = new System.Drawing.Point(682, 562);
+            this.pictureBox4.Location = new System.Drawing.Point(653, 582);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -437,12 +445,73 @@
             this.label11.TabIndex = 59;
             this.label11.Text = "DNI :";
             // 
+            // lblErrorClientes
+            // 
+            this.lblErrorClientes.AutoSize = true;
+            this.lblErrorClientes.Location = new System.Drawing.Point(653, 552);
+            this.lblErrorClientes.Name = "lblErrorClientes";
+            this.lblErrorClientes.Size = new System.Drawing.Size(0, 15);
+            this.lblErrorClientes.TabIndex = 60;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(640, 318);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(347, 39);
+            this.btnLimpiar.TabIndex = 61;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(608, 111);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 15);
+            this.label12.TabIndex = 62;
+            this.label12.Text = "Detalle :";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.pictureBox5.Image = global::Vista.Properties.Resources.Invoicing_icon_icons_com_54813;
+            this.pictureBox5.Location = new System.Drawing.Point(755, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 63;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // lblHistorial
+            // 
+            this.lblHistorial.AutoSize = true;
+            this.lblHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblHistorial.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHistorial.ForeColor = System.Drawing.Color.Blue;
+            this.lblHistorial.Location = new System.Drawing.Point(688, 63);
+            this.lblHistorial.Name = "lblHistorial";
+            this.lblHistorial.Size = new System.Drawing.Size(181, 18);
+            this.lblHistorial.TabIndex = 64;
+            this.lblHistorial.Text = "Historial de Facturacion";
+            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1024, 619);
+            this.ClientSize = new System.Drawing.Size(1024, 636);
+            this.Controls.Add(this.lblHistorial);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.lblErrorClientes);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtDniCliente);
             this.Controls.Add(this.label10);
@@ -490,6 +559,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtvCarrito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -533,5 +603,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtDniCliente;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblErrorClientes;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label lblHistorial;
     }
 }

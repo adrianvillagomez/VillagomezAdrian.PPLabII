@@ -14,10 +14,12 @@ namespace Vista
     public partial class FrmFactura : Form
     {
         Factura factura;
-        public FrmFactura(Factura f1)
+        List<Factura> listaFacturas;
+        public FrmFactura(Factura f1, List<Factura> listaFacturas)
         {
             InitializeComponent();
             this.factura = f1;
+            this.listaFacturas = listaFacturas;
         }
 
         private void FrmFactura_Load(object sender, EventArgs e)
@@ -31,8 +33,25 @@ namespace Vista
                 lstProductos.DataSource = null;
                 lstProductos.Items.Add($"Marca : {item.Marca}");
                 lstProductos.Items.Add($"Precio :{item.Precio}");
-                
-            }                         
+                lstProductos.Items.Add($"Tag : {item.Tag}");
+            }
+            lblSubTotal.Text = factura.SubTotal.ToString();
+            lblProducto.Text = factura.MedioDePago.ToString();
+            lblTotal.Text = factura.Total.ToString();
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Venta Realizado con exito!");
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Venta Cancelada!");
+            this.DialogResult = DialogResult.Cancel;          
+            this.Close();
         }
     }
 }

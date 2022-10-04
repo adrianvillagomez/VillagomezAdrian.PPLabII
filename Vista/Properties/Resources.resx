@@ -124,11 +124,17 @@
   <data name="electronic_13641 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\electronic_13641 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="onlineshop_78377" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\onlineshop_78377.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sales_sale_supermarket_stock_market_icon_153077" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sales_sale_supermarket_stock_market_icon_153077.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="find_search_locate_6201" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\find_search_locate_6201.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="62876moneybag_109253" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\62876moneybag_109253.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="refresh_14433" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh_14433.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,20 +157,17 @@
   <data name="add_box_item_product_icon_179239" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_box_item_product_icon_179239.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1486504352-checklist-clipboard-inventory-list-report-tasks-todo_81326 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1486504352-checklist-clipboard-inventory-list-report-tasks-todo_81326 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="artboard_123056" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\artboard_123056.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4105931-add-to-cart-buy-cart-sell-shop-shopping-cart_113919" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4105931-add-to-cart-buy-cart-sell-shop-shopping-cart_113919.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="offer_discount_sales_economy_icon_227983" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\offer_discount_sales_economy_icon_227983.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="invoice_document_bill_delivery_note_icon_225179" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\invoice_document_bill_delivery_note_icon_225179.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="onlineshop_78377" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\onlineshop_78377.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="offer_discount_sales_economy_icon_227983" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\offer_discount_sales_economy_icon_227983.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-0013-sale_102755" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-0013-sale_102755.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,10 +175,10 @@
   <data name="1486504352-checklist-clipboard-inventory-list-report-tasks-todo_81326" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1486504352-checklist-clipboard-inventory-list-report-tasks-todo_81326.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="62876moneybag_109253" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\62876moneybag_109253.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1486504352-checklist-clipboard-inventory-list-report-tasks-todo_81326 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1486504352-checklist-clipboard-inventory-list-report-tasks-todo_81326 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="artboard_123056" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\artboard_123056.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Invoicing_icon-icons.com_54813" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Invoicing_icon-icons.com_54813.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

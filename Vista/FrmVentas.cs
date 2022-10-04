@@ -17,17 +17,19 @@ namespace Vista
         Negocio central;
         List<Producto> listaAux;
         List<Producto> listaAuxPedido;
+        List<Factura> listaFacturas;
         decimal acumulador;
         public FrmVentas(Negocio negocio)
         {
             InitializeComponent();
             this.central = negocio;
             listaAuxPedido = new List<Producto>();
+            listaFacturas = new List<Factura>();
         }
         private void FrmVentas_Load(object sender, EventArgs e)
         {
             cmbBuscador.DataSource = Enum.GetValues(typeof(Tag));
-           
+
             LimpiarListBoxAux();
 
 
@@ -67,9 +69,9 @@ namespace Vista
             if (lstProductos.SelectedIndex != -1)
             {
                 if (txtMarca.Text.Trim() == "" || txtMarca.Text.Trim() == "" || txtCategoria.Text.Trim() == "" || txtModelo.Text.Trim() == "")
-                {                  
+                {
                     lblErrorInv.Text = "*Seleccionar productos de la Lista";
-                    lblErrorInv.ForeColor = Color.Red;                 
+                    lblErrorInv.ForeColor = Color.Red;
                 }
                 else
                 {
@@ -82,9 +84,9 @@ namespace Vista
                         lstProductos.DataSource = listaAux;
                         acumulador += p.Precio;
                         txtPrecioTotal.Text = acumulador.ToString();
-                        lblErrorInv.Text ="";
+                        lblErrorInv.Text = "";
                         AgregarProductosCarrito();
-                        if(cmbMetodoDePago.SelectedIndex == 0)
+                        if (cmbMetodoDePago.SelectedIndex == 0)
                         {
                             decimal.TryParse(txtPrecioTotal.Text, out decimal total);
                             txtPrecioFinal.Text = total.ToString();
@@ -92,7 +94,7 @@ namespace Vista
                         if (cmbMetodoDePago.SelectedIndex == 1)
                         {
                             decimal.TryParse(txtPrecioTotal.Text, out decimal total);
-                            txtPrecioFinal.Text = (total+(total*10/100)).ToString();
+                            txtPrecioFinal.Text = (total + (total * 10 / 100)).ToString();
                         }
                     }
                 }
@@ -102,7 +104,7 @@ namespace Vista
                 lblErrorInv.Text = "*Seleccionar productos de la Lista";
                 lblErrorInv.ForeColor = Color.Red;
             }
-           
+
         }
         private void AgregarProductosCarrito()
         {
@@ -124,7 +126,7 @@ namespace Vista
         private void cmbMetodoDePago_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbMetodoDePago.SelectedIndex == 0)
-            {             
+            {
                 decimal.TryParse(txtPrecioTotal.Text, out decimal total);
                 txtPrecioFinal.Text = total.ToString();
             }
@@ -137,20 +139,66 @@ namespace Vista
 
         private void btnVenta_Click(object sender, EventArgs e)
         {
-            Random rd = new Random();
-            Cliente c1 = new Cliente(txtNombreCliente.Text,txtApellidoCliente.Text,txtDniCliente.Text);
-            Factura f1 = new Factura();
-            f1.Cliente= c1;
-            f1.ListaAuxPedido=this.listaAuxPedido;
-            f1.Codigo = rd.Next(1500, 2000);
-
-            //Agregar a una lsita de facturas para el historial ;
-            FrmFactura factura = new FrmFactura(f1);
-            factura.ShowDialog();
+            if (ValidarIngresoDeCliente())
+            {
+                Random rd = new Random();
+                Cliente c1 = new Cliente(txtNombreCliente.Text, txtApellidoCliente.Text, txtDniCliente.Text);
+                Factura f1 = new Factura();
+                f1.Cliente = c1;
+                f1.ListaAuxPedido = this.listaAuxPedido;
+                f1.Codigo = rd.Next(1500, 2000);
+                decimal.TryParse(txtPrecioTotal.Text, out decimal subTotal);
+                decimal.TryParse(txtPrecioFinal.Text, out decimal precioFinal);
+                f1.SubTotal = subTotal;
+                f1.Total = precioFinal;
+                f1.MedioDePago = (MetodoDePago)cmbMetodoDePago.SelectedItem;
+                //Agregar a una lsita de facturas para el historial ;
+                listaFacturas.Add(f1);
+                FrmFactura factura = new FrmFactura(f1,listaFacturas);
+                factura.ShowDialog();
+                if (factura.DialogResult == DialogResult.OK)
+                {
+                    btnLimpiar_Click(sender,e);
+                }
+                if (factura.DialogResult == DialogResult.Cancel)
+                {
+                    listaFacturas.Remove(f1);
+                    btnLimpiar_Click(sender, e);
+                }
+            }
         }
-        //Agregar a una lsita de facturas para el historial ;
-        //Boton de historial
-        //Validar q se completen los nombres en ventas
-        //validar q se eligan productos
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            listaAuxPedido.Clear();
+            dtvCarrito.DataSource = null;
+
+            txtPrecioTotal.Text = "";
+            txtPrecioFinal.Text = "";
+            cmbMetodoDePago.SelectedIndex = 0;            
+
+        }
+        private bool ValidarIngresoDeCliente()
+        {
+            if (txtApellidoCliente.Text == "" || txtNombreCliente.Text == "" || txtDniCliente.Text == "")
+            {
+                lblErrorClientes.Text = "*Cliente no Ingresado";
+                lblErrorClientes.ForeColor = Color.Red;
+                return false;
+            }
+            return true;
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            FrmHistorialFactura historialFactura = new FrmHistorialFactura();
+            historialFactura.ShowDialog();            
+        }
+       
     }
 }
