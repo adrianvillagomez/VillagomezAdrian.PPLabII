@@ -18,6 +18,7 @@ namespace Vista
         List<Producto> listaAux;
         List<Producto> listaAuxPedido;
         List<Factura> listaFacturas;
+        Factura f1;//
         decimal acumulador;
         public FrmVentas(Negocio negocio)
         {
@@ -143,7 +144,7 @@ namespace Vista
             {
                 Random rd = new Random();
                 Cliente c1 = new Cliente(txtNombreCliente.Text, txtApellidoCliente.Text, txtDniCliente.Text);
-                Factura f1 = new Factura();
+                f1 = new Factura();// se incializa goblal
                 f1.Cliente = c1;
                 f1.ListaAuxPedido = this.listaAuxPedido;
                 f1.Codigo = rd.Next(1500, 2000);
@@ -152,7 +153,7 @@ namespace Vista
                 f1.SubTotal = subTotal;
                 f1.Total = precioFinal;
                 f1.MedioDePago = (MetodoDePago)cmbMetodoDePago.SelectedItem;
-                //Agregar a una lsita de facturas para el historial ;
+               
                 listaFacturas.Add(f1);
                 FrmFactura factura = new FrmFactura(f1,listaFacturas);
                 factura.ShowDialog();
@@ -196,7 +197,7 @@ namespace Vista
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            FrmHistorialFactura historialFactura = new FrmHistorialFactura();
+            FrmHistorialFactura historialFactura = new FrmHistorialFactura(listaFacturas,f1);
             historialFactura.ShowDialog();            
         }
        

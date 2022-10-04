@@ -24,5 +24,12 @@ namespace Entidades
         public decimal SubTotal { get => subTotal; set => subTotal = value; }
         public decimal Total { get => total; set => total = value; }
         public MetodoDePago MedioDePago { get => medioDePago; set => medioDePago = value; }
+        public string NombreDelCliente
+        {
+            get
+            {
+                return cliente.Nombre;
+            }
+        }
     }
 }

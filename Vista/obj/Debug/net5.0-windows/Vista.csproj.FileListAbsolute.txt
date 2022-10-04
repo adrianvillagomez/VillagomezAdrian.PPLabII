@@ -25,3 +25,4 @@ F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.FrmInv
 F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.FrmVentas.resources
 F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.FrmFactura.resources
 F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.FrmHistorialFactura.resources
+F:\Labo2022\VillagomezAdrian.PPLabII\Vista\obj\Debug\net5.0-windows\Vista.FrmDetalleFactura.resources
