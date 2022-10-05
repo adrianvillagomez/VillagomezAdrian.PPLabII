@@ -71,11 +71,11 @@ Menu principal donde solo ingresara un usuario logeado como administrador.
 
 ![Imagen](/ImagenesMd/generarFactura.png) 
 
- * Nos mostrara los totales a pagar y al generar factura nos mostrar como queda la factura.Los métodos de pago con crédito tendrán un recargo de 10%.
+ * Nos mostrara los totales a pagar y el botón generar factura nos mostrar como queda la factura.Los métodos de pago con crédito tendrán un recargo de 10%.
 
 
  ![Imagen](/ImagenesMd/factura.png) 
- * Factura generada por nuestro boton de generar factura.
+ * Factura generada por nuestro botón de generar factura.
 
  ![Historial facturación](/ImagenesMd/Historial.png)
 
