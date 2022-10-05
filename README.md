@@ -50,10 +50,36 @@ Menu principal donde solo ingresara un usuario logeado como administrador.
 
 ![Imagen](/ImagenesMd/Refrescar.png) : Mostrar nuevamente todos nuestro Productos.
 
-📌**Cerrar sesión** : Cerrar nuestra aplicación y volveremos al login
+📌**Cerrar sesión** : Cerrara nuestra aplicación y volveremos al login
 
 ## Vendedor
 
 * 🚀**Administrar Inventario**
 
 ![Imagen](/ImagenesMd/VentasAdm.png)
+📌**Buscar Producto** : Buscaremos un producto para vender y agregaremos con doble click a la sección detalle.
+
+📌**Detalle** : Nos mostrar el producto seleccionado previamente y ver si queremos agregarlo al carrito.
+
+![Imagen](/ImagenesMd/agregaralcarrito.png) : Agregaremos el producto de nuestra sección detalle a nuestro carrito de compras.
+
+![Imagen](/ImagenesMd/Limpiar.png) : Limpiara todos los campos para realizar una nueva venta.
+
+📌**Carrito de Compras** : Nos mostrara una lista de todos los productos a comprar
+
+![Imagen](/ImagenesMd/cliente.png) : Campos obligatorios para obtener los datos del cliente.
+
+![Imagen](/ImagenesMd/generarFactura.png) 
+
+ * Nos mostrara los totales a pagar y al generar factura nos mostrar como queda la factura.Los métodos de pago con crédito tendrán un recargo de 10%.
+
+
+ ![Imagen](/ImagenesMd/factura.png) 
+ * Factura generada por nuestro boton de generar factura.
+
+ ![Historial facturación](/ImagenesMd/Historial.png)
+
+ 📌**Historial Facturación** : Nos mostrar el historial de todas nuestras facturas.
+ Si hacemos doble click el la fila del dragridview nos mostrara el detalle de nuestro producto.
+
+![Imagen](/ImagenesMd/Detalle.png) 

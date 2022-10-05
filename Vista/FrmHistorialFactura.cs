@@ -27,6 +27,7 @@ namespace Vista
 
             dtvHistorial.DataSource = null;
             dtvHistorial.DataSource = listaFacturas;
+            this.dtvHistorial.Columns["Cliente"].Visible = false;
 
         }
 
@@ -40,7 +41,6 @@ namespace Vista
             FrmDetalleFactura detalle = new FrmDetalleFactura(item1,codigo,subTotal,total,metodoPago);
             detalle.ShowDialog();
         }
-        //Agregar validacion a ventas / nombres
-        //documentar y agregar herencia en frmPrincipal
+     
     }
 }
