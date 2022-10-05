@@ -29,9 +29,8 @@ namespace Vista
                 {
                     //SoundPlayer sound = new SoundPlayer(@"c:\Windows\Media\IniciodenavegacióndeWindows.wav");
                     //sound.Play();
-                    FrmMenu menu = new FrmMenu(this,central);
-                    //this.Hide();
-                    menu.Show();
+                    FrmMenu menu = new FrmMenu(this,central);                  
+                    menu.ShowDialog();
                     
                 }
                 else if(txtMail.Text == "alberto@gmail.com" && txtContraseña.Text == "Adf145633")
