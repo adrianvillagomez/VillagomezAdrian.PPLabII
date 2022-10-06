@@ -1,11 +1,12 @@
 
 
 # TIENDA DE ELECTRONICA
-## Electronic life
  Proyecto creado para evaluación de LaboratorioII y programaciónII.
+ Se nos pide generar una aplicación de escritorio para una tienda de electrónica que gestione un inventario de productos y un sistema de ventas.
 
- Se nos pide generar una aplicación de escritorio para una tienda de electrónica.
-
+ ## Autor
+  * [Adrian Villagomez](https://github.com/adrianvillagomez)
+## Electronic life
 * 🚀**Menu Login**
 
 Es el punto de entra de nuestra Aplicación contara con los siguientes botones :
@@ -17,12 +18,12 @@ Es el punto de entra de nuestra Aplicación contara con los siguientes botones :
 ![Imagen](/ImagenesMd/Login2.png)
 
 
-## Administrador
+### Administrador
 
 
 * 🚀**Menu Principal**
 
-Menu principal donde solo ingresara un usuario logeado como administrador.
+Menu principal donde solo ingresara el usuario logeado como administrador.
 
 📌**Botón Administrar Inventario** : Nos llevara al menu para administrar nuestros productos
 
@@ -31,6 +32,8 @@ Menu principal donde solo ingresara un usuario logeado como administrador.
 ![Imagen](/ImagenesMd/MenuPrincipal.png)
 
 * 🚀**Administrar Inventario**
+
+En este formulario podremos ver todos nuestros productos existentes y agregar mas cantidades al stock o ingresar mas productos.
 
 📌**Sección Detalle Producto** : Esta sección nos permitirá Agregar productos a nuestro Inventario.
 
@@ -56,17 +59,23 @@ Menu principal donde solo ingresara un usuario logeado como administrador.
 
 * 🚀**Administrar Inventario**
 
+En esta sección llevaremos a cabo nuestras ventas agregando tantos productos como queramos a nuestro carrito de compras y generando una factura para finalizar la venta o cancelar la venta.También tendremos un registro de todas nuestra facturas realizadas
+
 ![Imagen](/ImagenesMd/VentasAdm.png)
+
 📌**Buscar Producto** : Buscaremos un producto para vender y agregaremos con doble click a la sección detalle.
 
 📌**Detalle** : Nos mostrar el producto seleccionado previamente y ver si queremos agregarlo al carrito.
 
+📌**Carrito de Compras** : Nos mostrara una lista de todos los productos a comprar.
+<br>
+<br>
 ![Imagen](/ImagenesMd/agregaralcarrito.png) : Agregaremos el producto de nuestra sección detalle a nuestro carrito de compras.
-
+<br>
+<br>
 ![Imagen](/ImagenesMd/Limpiar.png) : Limpiara todos los campos para realizar una nueva venta.
-
-📌**Carrito de Compras** : Nos mostrara una lista de todos los productos a comprar
-
+<br>
+<br>
 ![Imagen](/ImagenesMd/cliente.png) : Campos obligatorios para obtener los datos del cliente.
 
 ![Imagen](/ImagenesMd/generarFactura.png) 
@@ -83,3 +92,17 @@ Menu principal donde solo ingresara un usuario logeado como administrador.
  Si hacemos doble click el la fila del dragridview nos mostrara el detalle de nuestro producto.
 
 ![Imagen](/ImagenesMd/Detalle.png) 
+
+## Lecciones Aprendidas
+
++ Clases y métodos estáticos
++ OOP
++ Sobrecarga
++ WindowsForms
++ Colecciones
++ Enumerados
++ Encapsulamiento
++ Herencia
++ Polimorfismo
+
+

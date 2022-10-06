@@ -36,6 +36,9 @@ namespace Vista
 
             cmbMetodoDePago.DataSource = Enum.GetValues(typeof(MetodoDePago));
             cmbMetodoDePago.SelectedItem = 0;
+            txtNombreCliente.Text = "Juan";
+            txtApellidoCliente.Text = "Suarez";
+            txtDniCliente.Text = "94562213";
 
         }
         /// <summary>
