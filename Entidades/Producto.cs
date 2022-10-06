@@ -43,7 +43,7 @@ namespace Entidades
         }
         public int Cantidad { get => cantidad; set => cantidad = value; }
         /// <summary>
-        /// Dos usuarios sera iguales si tienen la misma marca,Tag y modelo
+        /// Dos usuarios seran iguales si tienen la misma marca,Tag y modelo
         /// </summary>
         /// <param name="c1"></param>
         /// <param name="c2"></param>

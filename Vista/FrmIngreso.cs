@@ -1,9 +1,11 @@
 ﻿using Entidades;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -15,6 +17,7 @@ namespace Vista
     public partial class FrmIngreso : Form
     {
         Negocio central;
+        Dueño dueño;
         public FrmIngreso()
         {
             InitializeComponent();
@@ -35,8 +38,7 @@ namespace Vista
                     {
                         if (txtMail.Text == ((Dueño)item).Mail && txtContraseña.Text == "1234")
                         {
-                            //SoundPlayer sound = new SoundPlayer(@"c:\Windows\Media\IniciodenavegacióndeWindows.wav");
-                            //sound.Play();
+                            dueño = (Dueño)item;
                             FrmMenu menu = new FrmMenu(central);
                             menu.ShowDialog();
                             break;
@@ -63,7 +65,7 @@ namespace Vista
             }
         }
         /// <summary>
-        /// Boton para autocompletar el login
+        /// Boton para autocompletar el login como vendedor o administrador.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -100,19 +102,19 @@ namespace Vista
         private Negocio AgregarProductos()
         {
             Negocio electronicLife = new Negocio();
-            Producto p1 = new Producto("Asus", Entidades.Tag.Placa_Video, "3050TI", 50000, 100);
-            Producto p2 = new Producto("Aorus", Entidades.Tag.Placa_Video, "205TI", 2354, 100);
-            Producto p3 = new Producto("Ventus", Entidades.Tag.Placa_Video, "1050", 42354, 100);
-            Producto p4 = new Producto("Kingston", Entidades.Tag.Componente_PC, "1050", 42354, 100);
-            Producto p5 = new Producto("Lenovo", Entidades.Tag.Computadoras, "B522", 42354, 2);
-            Producto p6 = new Producto("Samsumg", Entidades.Tag.Smarphones, "A23", 42354, 100);
-            Producto p7 = new Producto("Lenovo", Entidades.Tag.Computadoras, "C253", 10000, 10);
-            Producto p8 = new Producto("Samsumg", Entidades.Tag.Periferico, "Z25", 1000, 100);
-            Producto p9 = new Producto("WIffi", Entidades.Tag.Conectividad, "j21-58", 1500, 100);
-            Producto p10 = new Producto("Samsumg", Entidades.Tag.Almacenamiento, "SSD", 2500, 100);
-            Producto p11 = new Producto("Sonic", Entidades.Tag.Consolas, "PS4", 150000, 1);
-            Producto p12 = new Producto("Samsumg", Entidades.Tag.Periferico, "B35", 500, 100);
-            Producto p13 = new Producto("Aple", Entidades.Tag.Smarphones, "h35", 150000, 50);
+            Producto p1 = new Producto("asus", Entidades.Tag.Placa_Video, "3050", 50000, 100);
+            Producto p2 = new Producto("aorus", Entidades.Tag.Placa_Video, "205", 2354, 100);
+            Producto p3 = new Producto("ventus", Entidades.Tag.Placa_Video, "1050", 42354, 100);
+            Producto p4 = new Producto("kingston", Entidades.Tag.Componente_PC, "1050", 42354, 100);
+            Producto p5 = new Producto("lenovo", Entidades.Tag.Computadoras, "b522", 42354, 2);
+            Producto p6 = new Producto("samsumg", Entidades.Tag.Smarphones, "a23", 42354, 100);
+            Producto p7 = new Producto("lenovo", Entidades.Tag.Computadoras, "c253", 10000, 10);
+            Producto p8 = new Producto("samsumg", Entidades.Tag.Periferico, "z25", 1000, 100);
+            Producto p9 = new Producto("wifi", Entidades.Tag.Conectividad, "j2158", 1500, 100);
+            Producto p10 = new Producto("samsumg", Entidades.Tag.Almacenamiento, "ssd", 2500, 100);
+            Producto p11 = new Producto("sonic", Entidades.Tag.Consolas, "ps4", 150000, 1);
+            Producto p12 = new Producto("samsumg", Entidades.Tag.Periferico, "b35", 500, 100);
+            Producto p13 = new Producto("aplle", Entidades.Tag.Smarphones, "h35", 150000, 50);
 
             electronicLife += p1;
             electronicLife += p2;

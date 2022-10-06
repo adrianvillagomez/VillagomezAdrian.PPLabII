@@ -21,13 +21,22 @@ namespace Vista
             this.central = central; 
    
         }
+        /// <summary>
+        /// Evento click del boton Administrar inventario.Nos llevara al inventario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnInvenario_Click(object sender, EventArgs e)
         {
             FrmInventario inventario = new FrmInventario(central);
             inventario.ShowDialog();
             this.Close();
         }
-
+        /// <summary>
+        /// Evento click del boton Administrar ventas.Nos llevara al administrador de ventas.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnVentas_Click(object sender, EventArgs e)
         {
             FrmVentas ventas = new FrmVentas(central);

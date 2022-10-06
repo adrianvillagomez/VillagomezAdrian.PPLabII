@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblInicio = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBuscar = new System.Windows.Forms.Label();
@@ -252,9 +252,9 @@
             this.dtvCarrito.Location = new System.Drawing.Point(15, 429);
             this.dtvCarrito.Name = "dtvCarrito";
             this.dtvCarrito.ReadOnly = true;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.dtvCarrito.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dtvCarrito.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtvCarrito.RowTemplate.Height = 25;
             this.dtvCarrito.Size = new System.Drawing.Size(553, 185);
             this.dtvCarrito.TabIndex = 39;

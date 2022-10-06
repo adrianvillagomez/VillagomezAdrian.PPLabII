@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblInicio = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lvlCerrarSesion = new System.Windows.Forms.Label();
@@ -109,12 +109,12 @@
             this.dtvProductos.Location = new System.Drawing.Point(280, 140);
             this.dtvProductos.Name = "dtvProductos";
             this.dtvProductos.ReadOnly = true;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.dtvProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dtvProductos.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtvProductos.RowTemplate.Height = 25;
             this.dtvProductos.Size = new System.Drawing.Size(587, 371);
-            this.dtvProductos.TabIndex = 3;
+            this.dtvProductos.TabIndex = 10;
             this.dtvProductos.DoubleClick += new System.EventHandler(this.dtvProductos_DoubleClick);
             // 
             // btnAgregarProductos
@@ -125,7 +125,7 @@
             this.btnAgregarProductos.Location = new System.Drawing.Point(58, 409);
             this.btnAgregarProductos.Name = "btnAgregarProductos";
             this.btnAgregarProductos.Size = new System.Drawing.Size(174, 49);
-            this.btnAgregarProductos.TabIndex = 4;
+            this.btnAgregarProductos.TabIndex = 6;
             this.btnAgregarProductos.Text = "Agregar Producto";
             this.btnAgregarProductos.UseVisualStyleBackColor = false;
             this.btnAgregarProductos.Click += new System.EventHandler(this.btnAgregarProductos_Click);
@@ -157,7 +157,7 @@
             this.txtMarca.Location = new System.Drawing.Point(37, 170);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(175, 23);
-            this.txtMarca.TabIndex = 7;
+            this.txtMarca.TabIndex = 1;
             // 
             // label1
             // 
@@ -174,7 +174,7 @@
             this.txtFijarPrecio.Location = new System.Drawing.Point(37, 302);
             this.txtFijarPrecio.Name = "txtFijarPrecio";
             this.txtFijarPrecio.Size = new System.Drawing.Size(175, 23);
-            this.txtFijarPrecio.TabIndex = 9;
+            this.txtFijarPrecio.TabIndex = 4;
             // 
             // label2
             // 
@@ -191,7 +191,7 @@
             this.txtModelo.Location = new System.Drawing.Point(37, 258);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(175, 23);
-            this.txtModelo.TabIndex = 11;
+            this.txtModelo.TabIndex = 3;
             // 
             // label3
             // 
@@ -210,7 +210,7 @@
             this.cmbCategoria.Location = new System.Drawing.Point(37, 214);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(175, 23);
-            this.cmbCategoria.TabIndex = 13;
+            this.cmbCategoria.TabIndex = 2;
             // 
             // label4
             // 
@@ -227,7 +227,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(37, 346);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(175, 23);
-            this.txtCantidad.TabIndex = 15;
+            this.txtCantidad.TabIndex = 5;
             // 
             // pictureBoxBuscar
             // 
@@ -260,7 +260,7 @@
             this.cmbBuscador.Location = new System.Drawing.Point(873, 159);
             this.cmbBuscador.Name = "cmbBuscador";
             this.cmbBuscador.Size = new System.Drawing.Size(153, 25);
-            this.cmbBuscador.TabIndex = 20;
+            this.cmbBuscador.TabIndex = 7;
             // 
             // label6
             // 
@@ -309,7 +309,7 @@
             this.btnVentas.Location = new System.Drawing.Point(58, 463);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(174, 48);
-            this.btnVentas.TabIndex = 26;
+            this.btnVentas.TabIndex = 8;
             this.btnVentas.Text = "Administrar Ventas";
             this.btnVentas.UseVisualStyleBackColor = true;
             this.btnVentas.Click += new System.EventHandler(this.button1_Click);

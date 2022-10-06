@@ -31,6 +31,11 @@ namespace Vista
 
         }
 
+        /// <summary>
+        /// Evento doble click de mi historial de facturas .Abrira un detalle de mi factura
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dtvHistorial_DoubleClick(object sender, EventArgs e)
         {         
             Cliente item1 = (Cliente)dtvHistorial.CurrentRow.Cells[0].Value;

@@ -57,6 +57,11 @@ namespace Vista
             }
             LimpiarListBoxAux();
         }
+        /// <summary>
+        /// Evento doble click del listbox de la seccion buscar productos.Agregar los detalles del producto para confirmar compra.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lstProductos_DoubleClick(object sender, EventArgs e)
         {
             if (lstProductos.SelectedIndex != -1)
@@ -69,7 +74,7 @@ namespace Vista
             }
         }
         /// <summary>
-        /// Agrega prodcutos a mi carrito de compras
+        /// Evento del boton agregar.Validara que se selecciono productos y los agregara al carrito y le quitara la cantidad de stock correspondiente.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -106,6 +111,11 @@ namespace Vista
                             txtPrecioFinal.Text = (total + (total * 10 / 100)).ToString();
                         }
                     }
+                    else
+                    {
+                        lblErrorInv.Text = "*Producto sin stock";
+                        lblErrorInv.ForeColor = Color.Red;
+                    }
                 }
             }
             else
@@ -132,6 +142,11 @@ namespace Vista
             lstProductos.DataSource = null;
             lstProductos.DataSource = listaAux;
         }
+        /// <summary>
+        /// Evento del combobox que segun la cantidad de prodcutos calculara  el subtotal y el precio total
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbMetodoDePago_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbMetodoDePago.SelectedIndex == 0)
@@ -146,7 +161,7 @@ namespace Vista
             }
         }
         /// <summary>
-        /// Evento click del boton de venta Instanciara una factura si se elegi seguir con la compra
+        /// Evento click del boton de venta. Instanciara una factura si se elegi seguir con la compra.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -193,8 +208,13 @@ namespace Vista
 
             txtPrecioTotal.Text = "";
             txtPrecioFinal.Text = "";
-            cmbMetodoDePago.SelectedIndex = 0;            
+            cmbMetodoDePago.SelectedIndex = 0;
 
+            txtMarca.Text = "";
+            txtModelo.Text = "";
+            txtPrecio.Text = "";
+            txtCategoria.Text = "";
+            lblErrorClientes.Text = "";
         }
         private bool ValidarIngresoDeCliente()
         {
@@ -204,6 +224,13 @@ namespace Vista
                 lblErrorClientes.ForeColor = Color.Red;
                 return false;
             }
+            if (dtvCarrito.DataSource == null)
+            {
+                lblErrorClientes.Text = "*Carrito vacio";
+                lblErrorClientes.ForeColor = Color.Red;
+                return false;
+            }
+
             return true;
         }
         /// <summary>
@@ -216,6 +243,5 @@ namespace Vista
             FrmHistorialFactura historialFactura = new FrmHistorialFactura(listaFacturas,f1);
             historialFactura.ShowDialog();            
         }
-       
     }
 }

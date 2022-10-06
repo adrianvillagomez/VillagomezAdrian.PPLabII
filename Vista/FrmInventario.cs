@@ -56,9 +56,9 @@ namespace Vista
                 Tag tag;
                 decimal precio;
                 int cantidad;
-                string marca = txtMarca.Text;
+                string marca = txtMarca.Text.ToLower();
                 Enum.TryParse<Tag>(cmbCategoria.SelectedValue.ToString(), out tag);
-                string modelo = txtModelo.Text;
+                string modelo = txtModelo.Text.ToLower();
                 bool resultado1 = decimal.TryParse(txtFijarPrecio.Text, out precio);
                 bool resultado2 = int.TryParse(txtCantidad.Text, out cantidad);
                 if (resultado1 && resultado2)
