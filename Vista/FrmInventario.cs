@@ -14,11 +14,12 @@ namespace Vista
     public partial class FrmInventario : Form
     {
         Negocio central;
-
-        public FrmInventario(Negocio central)
+        Contador contador;
+        public FrmInventario(Negocio central,Contador contador)
         {
             InitializeComponent();
             this.central = central;
+            this.contador = contador;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -126,7 +127,7 @@ namespace Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmVentas f = new FrmVentas(central);
+            FrmVentas f = new FrmVentas(central, contador);
             f.ShowDialog();
         }
     }

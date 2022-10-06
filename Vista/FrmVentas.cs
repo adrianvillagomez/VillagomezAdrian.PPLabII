@@ -20,12 +20,14 @@ namespace Vista
         List<Factura> listaFacturas;
         Factura f1;
         decimal acumulador;
-        public FrmVentas(Negocio negocio)
+        Contador contador;
+        public FrmVentas(Negocio negocio, Contador contador)
         {
             InitializeComponent();
             this.central = negocio;
             listaAuxPedido = new List<Producto>();
             listaFacturas = new List<Factura>();
+            this.contador = contador;
         }
         private void FrmVentas_Load(object sender, EventArgs e)
         {
@@ -174,7 +176,7 @@ namespace Vista
             {
                 Random rd = new Random();
                 Cliente c1 = new Cliente(txtNombreCliente.Text, txtApellidoCliente.Text, txtDniCliente.Text);
-                f1 = new Factura();// se incializa goblal
+                f1 = new Factura();
                 f1.Cliente = c1;
                 f1.ListaAuxPedido = this.listaAuxPedido;
                 f1.Codigo = rd.Next(1500, 2000);
@@ -185,7 +187,7 @@ namespace Vista
                 f1.MedioDePago = (MetodoDePago)cmbMetodoDePago.SelectedItem;
                
                 listaFacturas.Add(f1);
-                FrmFactura factura = new FrmFactura(f1,listaFacturas);
+                FrmFactura factura = new FrmFactura(f1,listaFacturas,contador);
                 factura.ShowDialog();
                 if (factura.DialogResult == DialogResult.OK)
                 {

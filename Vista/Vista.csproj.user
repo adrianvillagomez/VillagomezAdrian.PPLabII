@@ -4,6 +4,9 @@
     <Compile Update="FrmDetalleFactura.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmEstadistica.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmFactura.cs">
       <SubType>Form</SubType>
     </Compile>

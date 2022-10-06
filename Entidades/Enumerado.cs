@@ -9,7 +9,8 @@ namespace Entidades
     public enum Roles
     {
         Administrador,
-        Vendedor
+        Vendedor,
+        Contador
     }
     public enum Tag
     {

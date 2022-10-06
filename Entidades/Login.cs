@@ -34,6 +34,7 @@ namespace Entidades
             usuarios.Add(new Vendedor("Juan", "Lara", "juan@gmail.com", "Adf2233"));
             usuarios.Add(new Vendedor("Jorge", "Gutierrez", "jorge@gmail.com", "Assdf145633"));
             usuarios.Add(new Vendedor("Lucho", "Kmpe", "lucho@gmail.com", "asd225633"));
+            usuarios.Add(new Contador("pablo", "Diaz", "pablo@gmail.com", "123456789"));
         }
     }
 }

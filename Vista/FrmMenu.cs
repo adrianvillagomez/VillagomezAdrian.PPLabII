@@ -14,11 +14,12 @@ namespace Vista
     public partial class FrmMenu : Form
     {  
         Negocio central;
-
-        public FrmMenu(Negocio central)
+        Contador contador;
+        public FrmMenu(Negocio central,Contador contador)
         {
             InitializeComponent();
             this.central = central; 
+            this.contador = contador;
    
         }
         /// <summary>
@@ -28,7 +29,7 @@ namespace Vista
         /// <param name="e"></param>
         private void btnInvenario_Click(object sender, EventArgs e)
         {
-            FrmInventario inventario = new FrmInventario(central);
+            FrmInventario inventario = new FrmInventario(central,contador);
             inventario.ShowDialog();
             this.Close();
         }
@@ -39,7 +40,7 @@ namespace Vista
         /// <param name="e"></param>
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            FrmVentas ventas = new FrmVentas(central);
+            FrmVentas ventas = new FrmVentas(central, contador);
             ventas.ShowDialog();
         }
     }

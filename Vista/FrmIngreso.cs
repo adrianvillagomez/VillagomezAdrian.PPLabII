@@ -17,7 +17,7 @@ namespace Vista
     public partial class FrmIngreso : Form
     {
         Negocio central;
-        Dueño dueño;
+        Contador contador;
         public FrmIngreso()
         {
             InitializeComponent();
@@ -38,8 +38,8 @@ namespace Vista
                     {
                         if (txtMail.Text == ((Dueño)item).Mail && txtContraseña.Text == "1234")
                         {
-                            dueño = (Dueño)item;
-                            FrmMenu menu = new FrmMenu(central);
+                            
+                            FrmMenu menu = new FrmMenu(central,contador);
                             menu.ShowDialog();
                             break;
                         }
@@ -48,16 +48,25 @@ namespace Vista
                     {
                         if (txtMail.Text == ((Vendedor)item).Mail && txtContraseña.Text == "Adf145633")
                         {
-                            FrmVentas ventas = new FrmVentas(central);
+                            FrmVentas ventas = new FrmVentas(central,contador);
                             ventas.ShowDialog();
                             break;
-                        }
-                        else
-                        {
-                            lblMensaje.Text = "*Usuario Incorrecto";
-                        }
+                        }                      
                     }
-                } 
+                    else if (item is Contador)
+                    {
+                        if (txtMail.Text == ((Contador)item).Mail && txtContraseña.Text == "123456789")
+                        {
+                            contador = (Contador)item;
+                            FrmEstadistica estadisticas = new FrmEstadistica(central,contador);
+                            estadisticas.ShowDialog();
+                            break;
+                        }
+                    }else
+                    {
+                        lblMensaje.Text = "*Usuario Incorrecto";
+                    }
+                }
             }
             else
             {
@@ -83,6 +92,14 @@ namespace Vista
             {
                 txtContraseña.Text = "Adf145633";
                 txtMail.Text = "alberto@gmail.com";
+                if (txtContraseña.Text != "Adf145633" && txtMail.Text != "alberto@gmail.com")
+                    lblMensaje.Visible = !lblMensaje.Visible;
+
+            }
+            else if (cmbRol.Text == "Contador")
+            {
+                txtContraseña.Text = "123456789";
+                txtMail.Text = "pablo@gmail.com";
                 if (txtContraseña.Text != "Adf145633" && txtMail.Text != "alberto@gmail.com")
                     lblMensaje.Visible = !lblMensaje.Visible;
 
