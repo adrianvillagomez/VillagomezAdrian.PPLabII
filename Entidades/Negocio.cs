@@ -17,7 +17,12 @@ namespace Entidades
         }
         public List<Cliente> ListaClientes { get => listaClientes; set => listaClientes = value; }
         public List<Producto> ListaProductos { get => listaProductos; set => listaProductos = value; }
-
+        /// <summary>
+        /// Agregara un producto a mi lista de productos y si son iguales se suma al stock
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="p1"></param>
+        /// <returns></returns>
         public static Negocio operator +(Negocio n1, Producto p1)
         {
             if (n1 is not null && p1 is not null)

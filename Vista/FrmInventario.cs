@@ -14,6 +14,7 @@ namespace Vista
     public partial class FrmInventario : Form
     {
         Negocio central;
+
         public FrmInventario(Negocio central)
         {
             InitializeComponent();
@@ -37,7 +38,11 @@ namespace Vista
 
         }
       
-
+        /// <summary>
+        /// Agregara prodcutos a mi inventario de productos y validara que los campos no esten vacios
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregarProductos_Click(object sender, EventArgs e)
         {
             if (txtCantidad.Text.Trim() == "" || txtMarca.Text.Trim() == "" || txtFijarPrecio.Text.Trim() == "" || txtModelo.Text.Trim() == "")
@@ -82,7 +87,11 @@ namespace Vista
             dtvProductos.DataSource = central.ListaProductos;
             this.dtvProductos.Columns["Cantidad"].Visible = false;
         }
-
+        /// <summary>
+        /// Boton de busqueda de productos segun el criterio elegido
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBoxBuscar_Click(object sender, EventArgs e)
         {
             List<Producto> listaAux = new List<Producto>();
@@ -100,7 +109,11 @@ namespace Vista
             this.dtvProductos.Columns["Cantidad"].Visible = false;
 
         }
-
+        /// <summary>
+        /// boton para refrescar mi lista de inventario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             LimpiarDataGrid();

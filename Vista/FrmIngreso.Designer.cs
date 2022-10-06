@@ -153,7 +153,7 @@
             this.BarraDeTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraDeTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraDeTitulo.Name = "BarraDeTitulo";
-            this.BarraDeTitulo.Size = new System.Drawing.Size(406, 50);
+            this.BarraDeTitulo.Size = new System.Drawing.Size(406, 40);
             this.BarraDeTitulo.TabIndex = 8;
             // 
             // pictureBox1

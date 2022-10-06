@@ -18,7 +18,7 @@ namespace Vista
         List<Producto> listaAux;
         List<Producto> listaAuxPedido;
         List<Factura> listaFacturas;
-        Factura f1;//
+        Factura f1;
         decimal acumulador;
         public FrmVentas(Negocio negocio)
         {
@@ -38,7 +38,11 @@ namespace Vista
             cmbMetodoDePago.SelectedItem = 0;
 
         }
-
+        /// <summary>
+        /// boton de busqueda segun criterio.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBoxBuscar_Click(object sender, EventArgs e)
         {
             listaAux = new List<Producto>();
@@ -64,7 +68,11 @@ namespace Vista
                 txtCategoria.Text = p.Tag.ToString();
             }
         }
-
+        /// <summary>
+        /// Agrega prodcutos a mi carrito de compras
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (lstProductos.SelectedIndex != -1)
@@ -137,7 +145,11 @@ namespace Vista
                 txtPrecioFinal.Text = (total + (total * 10 / 100)).ToString();
             }
         }
-
+        /// <summary>
+        /// Evento click del boton de venta Instanciara una factura si se elegi seguir con la compra
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnVenta_Click(object sender, EventArgs e)
         {
             if (ValidarIngresoDeCliente())
@@ -194,7 +206,11 @@ namespace Vista
             }
             return true;
         }
-
+        /// <summary>
+        /// evento click del boton historial de factura .Abrira el historial de facturas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             FrmHistorialFactura historialFactura = new FrmHistorialFactura(listaFacturas,f1);

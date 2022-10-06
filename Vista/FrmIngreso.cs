@@ -18,55 +18,72 @@ namespace Vista
         public FrmIngreso()
         {
             InitializeComponent();
-            this.central = AgregarProductos();
+            central = AgregarProductos();
         }
-
+        /// <summary>
+        /// Boton para ingresar al inventario o a ventas segun el criterio elegido
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             if (Login.ValidarDatos(txtMail.Text, txtContraseña.Text))
             {
-                if (txtMail.Text == "admin@admin.com" && txtContraseña.Text == "1234")
+                foreach (Usuario item in Login.Usuarios)
                 {
-                    //SoundPlayer sound = new SoundPlayer(@"c:\Windows\Media\IniciodenavegacióndeWindows.wav");
-                    //sound.Play();
-                    FrmMenu menu = new FrmMenu(this,central);                  
-                    menu.ShowDialog();
-                    
-                }
-                else if(txtMail.Text == "alberto@gmail.com" && txtContraseña.Text == "Adf145633")
-                {
-                    FrmVentas menu = new FrmVentas(central);
-                    menu.ShowDialog();
-                }
-                else
-                {
-                    lblMensaje.Text = "*Usuario Incorrecto";
-                }
-                
+                    if (item is Dueño)
+                    {
+                        if (txtMail.Text == ((Dueño)item).Mail && txtContraseña.Text == "1234")
+                        {
+                            //SoundPlayer sound = new SoundPlayer(@"c:\Windows\Media\IniciodenavegacióndeWindows.wav");
+                            //sound.Play();
+                            FrmMenu menu = new FrmMenu(central);
+                            menu.ShowDialog();
+                            break;
+                        }
+                    }
+                    else if (item is Vendedor)
+                    {
+                        if (txtMail.Text == ((Vendedor)item).Mail && txtContraseña.Text == "Adf145633")
+                        {
+                            FrmVentas ventas = new FrmVentas(central);
+                            ventas.ShowDialog();
+                            break;
+                        }
+                        else
+                        {
+                            lblMensaje.Text = "*Usuario Incorrecto";
+                        }
+                    }
+                } 
             }
             else
             {
                 lblMensaje.Text = "*Se deben Completar todos los campos";
             }
         }
-
+        /// <summary>
+        /// Boton para autocompletar el login
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAutocompletar_Click(object sender, EventArgs e)
         {
             if (cmbRol.Text == "Administrador")
             {
                 txtContraseña.Text = "1234";
                 txtMail.Text = "admin@admin.com";
-                if (txtContraseña.Text !="1234" && txtMail.Text != "admin@admin.com")
-                lblMensaje.Visible = !lblMensaje.Visible;
+                if (txtContraseña.Text != "1234" && txtMail.Text != "admin@admin.com")
+                    lblMensaje.Visible = !lblMensaje.Visible;
 
             }
             else if (cmbRol.Text == "Vendedor")
             {
                 txtContraseña.Text = "Adf145633";
                 txtMail.Text = "alberto@gmail.com";
-                if(txtContraseña.Text !="Adf145633" && txtMail.Text != "alberto@gmail.com")
-                lblMensaje.Visible = !lblMensaje.Visible;
-                
+                if (txtContraseña.Text != "Adf145633" && txtMail.Text != "alberto@gmail.com")
+                    lblMensaje.Visible = !lblMensaje.Visible;
+
             }
         }
 

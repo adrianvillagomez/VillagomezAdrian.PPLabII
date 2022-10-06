@@ -8,23 +8,17 @@ namespace Entidades
 {
     public static class Login
     {
-        private static List<Usuario> usuarios;
+        static List<Usuario> usuarios;
+
+        public static List<Usuario> Usuarios { get => usuarios; set => usuarios = value; }
+
         static Login()
         {
             usuarios = new List<Usuario>();
             AgregarUsuarios();
         }
 
-        public static List<Usuario> Usuarios { get => usuarios; set => usuarios = value; }
-
-        public static void AgregarUsuarios()
-        {
-            Dueño dueño = new Dueño("Juan","Rockefeller", "admin@admin.com", "1234");
-            Vendedor vendedor = new Vendedor("Alberto","Perez" ,"alberto@gmail.com", "Adf145633");          
-            usuarios.Add(dueño);
-            usuarios.Add(vendedor);
-           
-        }
+    
         public static bool ValidarDatos(string value,string pass)
         {
             if (!(string.IsNullOrEmpty(value))&& !(string.IsNullOrEmpty(pass)))
@@ -33,6 +27,13 @@ namespace Entidades
             }
             return false;
         }
-
+        public static void AgregarUsuarios()
+        {
+            usuarios.Add(new Dueño("Juan", "Perez", "admin@admin.com", "1234"));
+            usuarios.Add(new Vendedor("Alberto", "Gonzales", "alberto@gmail.com", "Adf145633"));
+            usuarios.Add(new Vendedor("Juan", "Lara", "juan@gmail.com", "Adf2233"));
+            usuarios.Add(new Vendedor("Jorge", "Gutierrez", "jorge@gmail.com", "Assdf145633"));
+            usuarios.Add(new Vendedor("Lucho", "Kmpe", "lucho@gmail.com", "asd225633"));
+        }
     }
 }

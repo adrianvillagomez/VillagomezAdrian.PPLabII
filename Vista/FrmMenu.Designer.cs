@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
-            this.btnInvenario = new System.Windows.Forms.Button();
+            this.btnInventario = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblEmpresa = new System.Windows.Forms.Label();
@@ -40,18 +40,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnInvenario
+            // btnInventario
             // 
-            this.btnInvenario.BackColor = System.Drawing.Color.White;
-            this.btnInvenario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnInvenario.ForeColor = System.Drawing.Color.Black;
-            this.btnInvenario.Location = new System.Drawing.Point(69, 257);
-            this.btnInvenario.Name = "btnInvenario";
-            this.btnInvenario.Size = new System.Drawing.Size(238, 48);
-            this.btnInvenario.TabIndex = 0;
-            this.btnInvenario.Text = "Administrar Inventario";
-            this.btnInvenario.UseVisualStyleBackColor = false;
-            this.btnInvenario.Click += new System.EventHandler(this.btnInvenario_Click);
+            this.btnInventario.BackColor = System.Drawing.Color.White;
+            this.btnInventario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnInventario.ForeColor = System.Drawing.Color.Black;
+            this.btnInventario.Location = new System.Drawing.Point(69, 257);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(238, 48);
+            this.btnInventario.TabIndex = 0;
+            this.btnInventario.Text = "Administrar Inventario";
+            this.btnInventario.UseVisualStyleBackColor = false;
+            this.btnInventario.Click += new System.EventHandler(this.btnInvenario_Click);
             // 
             // btnVentas
             // 
@@ -117,7 +117,7 @@
             this.Controls.Add(this.lblEmpresa);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnVentas);
-            this.Controls.Add(this.btnInvenario);
+            this.Controls.Add(this.btnInventario);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -125,7 +125,6 @@
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMenu_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -136,7 +135,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnInvenario;
+        private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblEmpresa;

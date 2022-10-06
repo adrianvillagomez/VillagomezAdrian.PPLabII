@@ -12,21 +12,15 @@ using System.Windows.Forms;
 namespace Vista
 {
     public partial class FrmMenu : Form
-    {
-        FrmIngreso ingreso;
+    {  
         Negocio central;
-        public FrmMenu(FrmIngreso ingreso,Negocio central)
+
+        public FrmMenu(Negocio central)
         {
             InitializeComponent();
-            this.ingreso = ingreso;
             this.central = central; 
+   
         }
-
-        private void FrmMenu_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //ingreso.Close();
-        }
-
         private void btnInvenario_Click(object sender, EventArgs e)
         {
             FrmInventario inventario = new FrmInventario(central);
