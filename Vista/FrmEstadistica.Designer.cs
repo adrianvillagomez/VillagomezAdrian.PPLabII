@@ -30,9 +30,11 @@
         {
             this.lblVentas = new System.Windows.Forms.Label();
             this.lblVentasRealizadas = new System.Windows.Forms.Label();
-            this.lstVentas = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblProductoMasVendido = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPeriferico = new System.Windows.Forms.Label();
+            this.lblVentasPromedioPeriferico = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblVentas
@@ -53,19 +55,10 @@
             this.lblVentasRealizadas.TabIndex = 1;
             this.lblVentasRealizadas.Text = "label1";
             // 
-            // lstVentas
-            // 
-            this.lstVentas.FormattingEnabled = true;
-            this.lstVentas.ItemHeight = 15;
-            this.lstVentas.Location = new System.Drawing.Point(53, 113);
-            this.lstVentas.Name = "lstVentas";
-            this.lstVentas.Size = new System.Drawing.Size(343, 169);
-            this.lstVentas.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(209, 75);
+            this.label1.Location = new System.Drawing.Point(191, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 15);
             this.label1.TabIndex = 3;
@@ -74,23 +67,56 @@
             // lblProductoMasVendido
             // 
             this.lblProductoMasVendido.AutoSize = true;
-            this.lblProductoMasVendido.Location = new System.Drawing.Point(47, 75);
+            this.lblProductoMasVendido.Location = new System.Drawing.Point(43, 86);
             this.lblProductoMasVendido.Name = "lblProductoMasVendido";
-            this.lblProductoMasVendido.Size = new System.Drawing.Size(127, 15);
+            this.lblProductoMasVendido.Size = new System.Drawing.Size(180, 15);
             this.lblProductoMasVendido.TabIndex = 4;
-            this.lblProductoMasVendido.Text = "Producto mas vendido";
+            this.lblProductoMasVendido.Text = "Producto mas vendido Periferico";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(43, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 15);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Promedio Ventas Periferico";
+            // 
+            // lblPeriferico
+            // 
+            this.lblPeriferico.AutoSize = true;
+            this.lblPeriferico.Location = new System.Drawing.Point(264, 86);
+            this.lblPeriferico.Name = "lblPeriferico";
+            this.lblPeriferico.Size = new System.Drawing.Size(38, 15);
+            this.lblPeriferico.TabIndex = 7;
+            this.lblPeriferico.Text = "label1";
+            // 
+            // lblVentasPromedioPeriferico
+            // 
+            this.lblVentasPromedioPeriferico.AutoSize = true;
+            this.lblVentasPromedioPeriferico.Location = new System.Drawing.Point(264, 111);
+            this.lblVentasPromedioPeriferico.Name = "lblVentasPromedioPeriferico";
+            this.lblVentasPromedioPeriferico.Size = new System.Drawing.Size(38, 15);
+            this.lblVentasPromedioPeriferico.TabIndex = 8;
+            this.lblVentasPromedioPeriferico.Text = "label1";
             // 
             // FrmEstadistica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(528, 573);
+            this.Controls.Add(this.lblVentasPromedioPeriferico);
+            this.Controls.Add(this.lblPeriferico);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblProductoMasVendido);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lstVentas);
             this.Controls.Add(this.lblVentasRealizadas);
             this.Controls.Add(this.lblVentas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmEstadistica";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEstadistica";
             this.Load += new System.EventHandler(this.FrmEstadistica_Load);
             this.ResumeLayout(false);
@@ -102,8 +128,10 @@
 
         private System.Windows.Forms.Label lblVentas;
         private System.Windows.Forms.Label lblVentasRealizadas;
-        private System.Windows.Forms.ListBox lstVentas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblProductoMasVendido;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPeriferico;
+        private System.Windows.Forms.Label lblVentasPromedioPeriferico;
     }
 }

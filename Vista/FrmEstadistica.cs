@@ -24,9 +24,11 @@ namespace Vista
 
         private void FrmEstadistica_Load(object sender, EventArgs e)
         {
-            lblVentasRealizadas.Text = contador.VentasRealizadas.ToString();
             
-           
+            lblVentasRealizadas.Text = contador.VentasRealizadas.ToString();        
+            lblPeriferico.Text = Contador.ProductoMasVendidoSegunTag(Entidades.Tag.Periferico);
+            lblVentasPromedioPeriferico.Text = Contador.PromedioGanaciaPorTag(Entidades.Tag.Periferico).ToString();
         }
+    
     }
 }

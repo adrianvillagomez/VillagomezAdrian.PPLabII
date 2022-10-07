@@ -48,44 +48,9 @@ namespace Vista
             contador.VentasRealizadas += 1;
             foreach (Producto item in factura.ListaAuxPedido)
             {
-
-                switch (item.Tag)
-                {
-                    case Entidades.Tag.Periferico:
-                        contador.VentasPerifericos += 1;
-                        if (item.Marca == "samsumg")
-                        {
-                            int contadorSamsumg ++;
-                        }
-                        break;
-                    case Entidades.Tag.Placa_Video:
-                        contador.VentasplacaVideo += 1;
-                        break;
-                    case Entidades.Tag.Notebooks:
-                        contador.VentasNote += 1;
-                        break;
-                    case Entidades.Tag.Computadoras:
-                        contador.VentasComputadoras += 1;
-                        break;
-                    case Entidades.Tag.Componente_PC:
-                        contador.VentasComponentePc += 1;
-                        break;
-                    case Entidades.Tag.Consolas:
-                        contador.VentasConsolas += 1;
-                        break;
-                    case Entidades.Tag.Smarphones:
-                        contador.VentasSmarphones += 1;
-                        break;
-                    case Entidades.Tag.Conectividad:
-                        contador.VentasConectividad += 1;
-                        break;
-                    case Entidades.Tag.Almacenamiento:
-                        contador.VentasAlmacenamiento += 1;
-                        break;
-                    default:
-                        break;
-                }
+                Contador.ListaProductoVendidos.Add(item);
             }
+ 
             this.DialogResult = DialogResult.OK;
             this.Close();
 

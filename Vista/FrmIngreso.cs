@@ -22,6 +22,7 @@ namespace Vista
         {
             InitializeComponent();
             central = AgregarProductos();
+            contador = new Contador("pablo", "Diaz", "pablo@gmail.com", "123456789");
         }
         /// <summary>
         /// Boton para ingresar al inventario o a ventas segun el criterio elegido
@@ -57,7 +58,6 @@ namespace Vista
                     {
                         if (txtMail.Text == ((Contador)item).Mail && txtContraseña.Text == "123456789")
                         {
-                            contador = (Contador)item;
                             FrmEstadistica estadisticas = new FrmEstadistica(central,contador);
                             estadisticas.ShowDialog();
                             break;
@@ -124,13 +124,13 @@ namespace Vista
             Producto p3 = new Producto("ventus", Entidades.Tag.Placa_Video, "1050", 42354, 100);
             Producto p4 = new Producto("kingston", Entidades.Tag.Componente_PC, "1050", 42354, 100);
             Producto p5 = new Producto("lenovo", Entidades.Tag.Computadoras, "b522", 42354, 2);
-            Producto p6 = new Producto("samsumg", Entidades.Tag.Smarphones, "a23", 42354, 100);
-            Producto p7 = new Producto("lenovo", Entidades.Tag.Computadoras, "c253", 10000, 10);
-            Producto p8 = new Producto("samsumg", Entidades.Tag.Periferico, "z25", 1000, 100);
+            Producto p6 = new Producto("efex", Entidades.Tag.Smarphones, "a23", 42354, 100);
+            Producto p7 = new Producto("Cubix", Entidades.Tag.Computadoras, "c253", 10000, 2);
+            Producto p8 = new Producto("samsumg", Entidades.Tag.Periferico, "z25", 1000, 20);
             Producto p9 = new Producto("wifi", Entidades.Tag.Conectividad, "j2158", 1500, 100);
             Producto p10 = new Producto("samsumg", Entidades.Tag.Almacenamiento, "ssd", 2500, 100);
             Producto p11 = new Producto("sonic", Entidades.Tag.Consolas, "ps4", 150000, 1);
-            Producto p12 = new Producto("samsumg", Entidades.Tag.Periferico, "b35", 500, 100);
+            Producto p12 = new Producto("Fox", Entidades.Tag.Periferico, "b35", 500, 20);
             Producto p13 = new Producto("aplle", Entidades.Tag.Smarphones, "h35", 150000, 50);
 
             electronicLife += p1;

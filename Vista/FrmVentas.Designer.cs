@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblInicio = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBuscar = new System.Windows.Forms.Label();
@@ -70,6 +70,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblHistorial = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtStock = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -252,9 +254,9 @@
             this.dtvCarrito.Location = new System.Drawing.Point(15, 429);
             this.dtvCarrito.Name = "dtvCarrito";
             this.dtvCarrito.ReadOnly = true;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.dtvCarrito.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dtvCarrito.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtvCarrito.RowTemplate.Height = 25;
             this.dtvCarrito.Size = new System.Drawing.Size(553, 185);
             this.dtvCarrito.TabIndex = 39;
@@ -501,12 +503,32 @@
             this.lblHistorial.TabIndex = 64;
             this.lblHistorial.Text = "Historial de Facturacion";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(812, 87);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(35, 15);
+            this.label13.TabIndex = 66;
+            this.label13.Text = "stock";
+            // 
+            // txtStock
+            // 
+            this.txtStock.Location = new System.Drawing.Point(812, 105);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.ReadOnly = true;
+            this.txtStock.Size = new System.Drawing.Size(175, 23);
+            this.txtStock.TabIndex = 65;
+            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 636);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtStock);
             this.Controls.Add(this.lblHistorial);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label12);
@@ -608,5 +630,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lblHistorial;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtStock;
     }
 }

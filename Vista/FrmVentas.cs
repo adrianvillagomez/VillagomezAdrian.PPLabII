@@ -76,6 +76,8 @@ namespace Vista
                 txtModelo.Text = p.Modelo;
                 txtPrecio.Text = p.Precio.ToString();
                 txtCategoria.Text = p.Tag.ToString();
+                txtStock.Text = p.Stock.ToString();
+
             }
         }
         /// <summary>
@@ -104,7 +106,7 @@ namespace Vista
                         acumulador += p.Precio;
                         txtPrecioTotal.Text = acumulador.ToString();
                         lblErrorInv.Text = "";
-                        AgregarProductosCarrito();
+                        AgregarProductosCarrito(p);
                         if (cmbMetodoDePago.SelectedIndex == 0)
                         {
                             decimal.TryParse(txtPrecioTotal.Text, out decimal total);
@@ -130,17 +132,15 @@ namespace Vista
             }
 
         }
-        private void AgregarProductosCarrito()
+        private void AgregarProductosCarrito(Producto p)
         {
-            Tag tag;
-            Enum.TryParse<Tag>(txtCategoria.Text, out tag);
-            decimal.TryParse(txtPrecio.Text, out decimal precio);
-            Producto pedido = new Producto(txtMarca.Text, tag, txtModelo.Text, precio, 0);
-            listaAuxPedido.Add(pedido);
+            int stock = int.Parse(txtStock.Text);
+            Producto pedido1 = new Producto(p.Marca, p.Tag,p.Modelo, p.Precio, p.Cantidad);
+            pedido1.Stock = stock;
+            listaAuxPedido.Add(pedido1);
             dtvCarrito.DataSource = null;
             dtvCarrito.DataSource = listaAuxPedido;
             dtvCarrito.Columns["Cantidad"].Visible = false;
-            dtvCarrito.Columns["Stock"].Visible = false;
         }
         private void LimpiarListBoxAux()
         {
